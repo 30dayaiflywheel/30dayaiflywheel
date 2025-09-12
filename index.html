@@ -62,6 +62,13 @@
     }
     .cta-button:hover { background:#e68a00; }
 
+    /* Mobile buy button (hidden on desktop) */
+    .mobile-buy-button {
+      display: none;
+      text-align: center;
+      margin: 20px 0;
+    }
+
     .testimonials { background:#f8f9fa; padding:60px 0; margin:60px 0; text-align:center; }
     .testimonial { max-width:800px; margin:0 auto; font-style:italic; color:#555; font-size:1.2rem; padding:0 20px; }
 
@@ -91,12 +98,24 @@
       .topnav.open .nav-links a { display:block; width:100%; text-align:left; margin:5px 0; padding:10px; }
 
       .book-content { flex-direction:column; gap:30px; }
+      
+      /* Show mobile buy button and hide desktop one */
+      .mobile-buy-button {
+        display: block;
+      }
+      .book-details .cta-button {
+        display: none;
+      }
     }
 
     @media (max-width:480px){
       .logo-text { font-size:1rem; }
       .topnav { height:60px; }
       .logo, .logo img { width:40px; height:40px; }
+      .cta-button {
+        padding: 14px 30px;
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
@@ -133,6 +152,11 @@
       <div class="book-content">
         <div class="book-cover">
           <img src="30dayaiflywheel.png" alt="30 Day AI Flywheel Book Cover" class="book-image">
+          
+          <!-- Mobile buy button (visible only on mobile) -->
+          <div class="mobile-buy-button">
+            <a href="https://www.amazon.com/dp/your-book-id" class="cta-button" target="_blank" rel="noopener">Buy on Amazon</a>
+          </div>
         </div>
 
         <div class="book-details">
@@ -148,6 +172,7 @@
           </ul>
 
           <p>Now available on Amazon in paperback.</p>
+          <!-- Desktop buy button (hidden on mobile) -->
           <a href="https://www.amazon.com/dp/your-book-id" class="cta-button" target="_blank" rel="noopener">Buy on Amazon</a>
         </div>
       </div>
