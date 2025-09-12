@@ -10,7 +10,6 @@
 
     body { background:#fff; color:#333; line-height:1.6; overflow-x:hidden; padding-top:20px; }
 
-    /* CHANGED: 1000px -> 1200px */
     .container { max-width:1200px; margin:0 auto; padding:0 20px; }
 
     /* Navigation */
@@ -25,7 +24,6 @@
       border-radius:8px; display:flex; align-items:center; justify-content:center;
       color:#fff; font-weight:bold; font-size:18px; margin-right:10px;
     }
-    /* NEW: keep logo image sizing consistent */
     .logo img { width:50px; height:50px; display:block; border-radius:8px; }
 
     .logo-text { font-size:1.2rem; font-weight:600; color:#2c3e50; }
@@ -36,7 +34,7 @@
       color:#333; text-align:center; padding:12px 16px; text-decoration:none;
       font-size:1rem; font-weight:500; border-radius:4px; margin:0 5px; transition:all .3s ease;
     }
-    /* .topnav a:hover, .topnav a.active { background:#ff9900; color:#fff; } */
+    .topnav a:hover, .topnav a.active { background:#ff9900; color:#fff; }
 
     .topnav .icon {
       display:none; color:#2c3e50; font-size:1.5rem; cursor:pointer; padding:10px;
@@ -81,10 +79,35 @@
       border-radius:4px; cursor:pointer; transition:background-color .3s; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin-top:10px;
     }
     .submit-btn:hover { background:#e68a00; }
+    .submit-btn:disabled {
+      background:#ccc;
+      cursor:not-allowed;
+    }
 
     .closing { text-align:center; margin-top:30px; font-style:italic; color:#7f8c8d; }
 
     footer { text-align:center; padding:25px 0; color:#7f8c8d; font-size:.9rem; border-top:1px solid #f0f0f0; margin-top:30px; }
+
+    /* Form message styles */
+    .form-message {
+      display: none;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    
+    .form-message.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .form-message.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
 
     /* Responsive */
     @media (max-width:1024px){
@@ -153,79 +176,87 @@
         <p>Writing this book and building the framework was only the first step. What matters most is how it works for you in practice. I would value your thoughts on where it helps, where it does not, and how it could be made stronger.</p>
       </section>
 
-<section class="form-section">
-  <div class="form-container">
-    <div class="form-intro">
-      <p>I would like to hear what you think about the book and the framework. Was it useful? Did it leave gaps? Is there something you would like explained in more depth? Your input helps refine the ideas and make them more practical for others.</p>
-    </div>
+      <section class="form-section">
+        <div class="form-container">
+          <div class="form-intro">
+            <p>I would like to hear what you think about the book and the framework. Was it useful? Did it leave gaps? Is there something you would like explained in more depth? Your input helps refine the ideas and make them more practical for others.</p>
+          </div>
 
-    <form 
-      class="feedback-form" 
-      id="feedbackForm" 
-      action="https://submit-form.com/Gmg185CQb" 
-      method="POST"
-    >
-      <input type="hidden" name="_subject" value="New Feedback - 30 Day AI Flywheel">
-      <input type="hidden" name="_feedback.success.title" value="Thank You for Your Feedback!">
-      <input type="hidden" name="_feedback.success.message" value="We appreciate you taking the time to share your thoughts. Your feedback helps us improve the 30 Day AI Flywheel framework.">
-      
-      <!-- Honeypot spam protection -->
-      <input type="checkbox" name="_honeypot" style="display: none !important;" tabindex="-1" autocomplete="off">
-      
-      <div class="form-group">
-        <label for="name">Name (optional)</label>
-        <input type="text" id="name" name="name" placeholder="Your name">
-      </div>
-      
-      <div class="form-group">
-        <label for="email">Email (optional if you would like a reply)</label>
-        <input type="email" id="email" name="email" placeholder="Your email address">
-      </div>
-      
-      <div class="form-group">
-        <label for="feedback" class="required">Your Feedback</label>
-        <textarea id="feedback" name="feedback" required placeholder="Please share your thoughts on the book and framework..."></textarea>
-      </div>
-      
-      <div class="form-group">
-        <label class="required">How useful did you find the framework?</label>
-        <div class="rating-container">
-          <label class="rating-option">
-            <input type="radio" name="rating" value="1" required>
-            <div class="rating-circle">1</div>
-            <span class="rating-label">Not useful</span>
-          </label>
-          <label class="rating-option">
-            <input type="radio" name="rating" value="2">
-            <div class="rating-circle">2</div>
-            <span class="rating-label">Slightly useful</span>
-          </label>
-          <label class="rating-option">
-            <input type="radio" name="rating" value="3">
-            <div class="rating-circle">3</div>
-            <span class="rating-label">Moderately useful</span>
-          </label>
-          <label class="rating-option">
-            <input type="radio" name="rating" value="4">
-            <div class="rating-circle">4</div>
-            <span class="rating-label">Very useful</span>
-          </label>
-          <label class="rating-option">
-            <input type="radio" name="rating" value="5">
-            <div class="rating-circle">5</div>
-            <span class="rating-label">Extremely useful</span>
-          </label>
+          <form 
+            class="feedback-form" 
+            id="feedbackForm" 
+            action="https://submit-form.com/Gmg185CQb" 
+            method="POST"
+          >
+            <!-- Form submission messages -->
+            <div class="form-message success" id="successMessage">
+              Thank you for your feedback! We'll be in touch soon.
+            </div>
+            <div class="form-message error" id="errorMessage">
+              Sorry, there was an error submitting your form. Please try again.
+            </div>
+            
+            <input type="hidden" name="_subject" value="New Feedback - 30 Day AI Flywheel">
+            <input type="hidden" name="_redirect" value="https://yourwebsite.com/feedback.html?submission=success">
+            <input type="hidden" name="_error_redirect" value="https://yourwebsite.com/feedback.html?submission=error">
+            
+            <!-- Honeypot spam protection -->
+            <input type="checkbox" name="_honeypot" style="display: none !important;" tabindex="-1" autocomplete="off">
+            
+            <div class="form-group">
+              <label for="name">Name (optional)</label>
+              <input type="text" id="name" name="name" placeholder="Your name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email (optional if you would like a reply)</label>
+              <input type="email" id="email" name="email" placeholder="Your email address">
+            </div>
+            
+            <div class="form-group">
+              <label for="feedback" class="required">Your Feedback</label>
+              <textarea id="feedback" name="feedback" required placeholder="Please share your thoughts on the book and framework..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label class="required">How useful did you find the framework?</label>
+              <div class="rating-container">
+                <label class="rating-option">
+                  <input type="radio" name="rating" value="1" required>
+                  <div class="rating-circle">1</div>
+                  <span class="rating-label">Not useful</span>
+                </label>
+                <label class="rating-option">
+                  <input type="radio" name="rating" value="2">
+                  <div class="rating-circle">2</div>
+                  <span class="rating-label">Slightly useful</span>
+                </label>
+                <label class="rating-option">
+                  <input type="radio" name="rating" value="3">
+                  <div class="rating-circle">3</div>
+                  <span class="rating-label">Moderately useful</span>
+                </label>
+                <label class="rating-option">
+                  <input type="radio" name="rating" value="4">
+                  <div class="rating-circle">4</div>
+                  <span class="rating-label">Very useful</span>
+                </label>
+                <label class="rating-option">
+                  <input type="radio" name="rating" value="5">
+                  <div class="rating-circle">5</div>
+                  <span class="rating-label">Extremely useful</span>
+                </label>
+              </div>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submitButton">Submit Feedback</button>
+          </form>
+
+          <div class="closing">
+            <p>Every response is read carefully. Thank you for helping to improve the work and push the framework further.</p>
+          </div>
         </div>
-      </div>
-      
-      <button type="submit" class="submit-btn">Submit Feedback</button>
-    </form>
-
-    <div class="closing">
-      <p>Every response is read carefully. Thank you for helping to improve the work and push the framework further.</p>
-    </div>
-  </div>
-</section>
+      </section>
     </main>
 
     <footer>
@@ -267,13 +298,31 @@
       });
     });
 
-    // Form submission (demo)
-    document.getElementById('feedbackForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value || 'Anonymous';
-      const rating = document.querySelector('input[name="rating"]:checked')?.value || 'N/A';
-      alert(`Thank you, ${name}, for your feedback! Your ${rating}/5 rating and comments have been received.`);
-      this.reset();
+    // Check URL for submission status
+    const urlParams = new URLSearchParams(window.location.search);
+    const submissionStatus = urlParams.get('submission');
+    
+    if (submissionStatus === 'success') {
+      showMessage('Thank you for your feedback! Your response has been submitted successfully.', 'success');
+    } else if (submissionStatus === 'error') {
+      showMessage('Sorry, there was an error submitting your form. Please try again.', 'error');
+    }
+    
+    function showMessage(text, type) {
+      const messageDiv = document.getElementById(type === 'success' ? 'successMessage' : 'errorMessage');
+      messageDiv.textContent = text;
+      messageDiv.style.display = 'block';
+      
+      // Scroll to message
+      messageDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Form submission handling
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+      // Just show a loading state, don't prevent default submission
+      const submitBtn = document.getElementById('submitButton');
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
     });
   </script>
 </body>
