@@ -153,67 +153,79 @@
         <p>Writing this book and building the framework was only the first step. What matters most is how it works for you in practice. I would value your thoughts on where it helps, where it does not, and how it could be made stronger.</p>
       </section>
 
-      <section class="form-section">
-        <div class="form-container">
-          <div class="form-intro">
-            <p>I would like to hear what you think about the book and the framework. Was it useful? Did it leave gaps? Is there something you would like explained in more depth? Your input helps refine the ideas and make them more practical for others.</p>
-          </div>
+<section class="form-section">
+  <div class="form-container">
+    <div class="form-intro">
+      <p>I would like to hear what you think about the book and the framework. Was it useful? Did it leave gaps? Is there something you would like explained in more depth? Your input helps refine the ideas and make them more practical for others.</p>
+    </div>
 
-          <form class="feedback-form" id="feedbackForm">
-            <div class="form-group">
-              <label for="name">Name (optional)</label>
-              <input type="text" id="name" name="name" placeholder="Your name">
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email (optional if you would like a reply)</label>
-              <input type="email" id="email" name="email" placeholder="Your email address">
-            </div>
-
-            <div class="form-group">
-              <label for="feedback" class="required">Your Feedback</label>
-              <textarea id="feedback" name="feedback" required placeholder="Please share your thoughts on the book and framework..."></textarea>
-            </div>
-
-            <div class="form-group">
-              <label class="required">How useful did you find the framework?</label>
-              <div class="rating-container">
-                <label class="rating-option">
-                  <input type="radio" name="rating" value="1" required>
-                  <div class="rating-circle">1</div>
-                  <span class="rating-label">Not useful</span>
-                </label>
-                <label class="rating-option">
-                  <input type="radio" name="rating" value="2">
-                  <div class="rating-circle">2</div>
-                  <span class="rating-label">Slightly useful</span>
-                </label>
-                <label class="rating-option">
-                  <input type="radio" name="rating" value="3">
-                  <div class="rating-circle">3</div>
-                  <span class="rating-label">Moderately useful</span>
-                </label>
-                <label class="rating-option">
-                  <input type="radio" name="rating" value="4">
-                  <div class="rating-circle">4</div>
-                  <span class="rating-label">Very useful</span>
-                </label>
-                <label class="rating-option">
-                  <input type="radio" name="rating" value="5">
-                  <div class="rating-circle">5</div>
-                  <span class="rating-label">Extremely useful</span>
-                </label>
-              </div>
-            </div>
-
-            <button type="submit" class="submit-btn">Submit Feedback</button>
-          </form>
-
-          <div class="closing">
-            <p>Every response is read carefully. Thank you for helping to improve the work and push the framework further.</p>
-          </div>
+    <form 
+      class="feedback-form" 
+      id="feedbackForm" 
+      action="https://submit-form.com/Gmg185CQb" 
+      method="POST"
+    >
+      <input type="hidden" name="_subject" value="New Feedback - 30 Day AI Flywheel">
+      <input type="hidden" name="_feedback.success.title" value="Thank You for Your Feedback!">
+      <input type="hidden" name="_feedback.success.message" value="We appreciate you taking the time to share your thoughts. Your feedback helps us improve the 30 Day AI Flywheel framework.">
+      
+      <!-- Honeypot spam protection -->
+      <input type="checkbox" name="_honeypot" style="display: none !important;" tabindex="-1" autocomplete="off">
+      
+      <div class="form-group">
+        <label for="name">Name (optional)</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email (optional if you would like a reply)</label>
+        <input type="email" id="email" name="email" placeholder="Your email address">
+      </div>
+      
+      <div class="form-group">
+        <label for="feedback" class="required">Your Feedback</label>
+        <textarea id="feedback" name="feedback" required placeholder="Please share your thoughts on the book and framework..."></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label class="required">How useful did you find the framework?</label>
+        <div class="rating-container">
+          <label class="rating-option">
+            <input type="radio" name="rating" value="1" required>
+            <div class="rating-circle">1</div>
+            <span class="rating-label">Not useful</span>
+          </label>
+          <label class="rating-option">
+            <input type="radio" name="rating" value="2">
+            <div class="rating-circle">2</div>
+            <span class="rating-label">Slightly useful</span>
+          </label>
+          <label class="rating-option">
+            <input type="radio" name="rating" value="3">
+            <div class="rating-circle">3</div>
+            <span class="rating-label">Moderately useful</span>
+          </label>
+          <label class="rating-option">
+            <input type="radio" name="rating" value="4">
+            <div class="rating-circle">4</div>
+            <span class="rating-label">Very useful</span>
+          </label>
+          <label class="rating-option">
+            <input type="radio" name="rating" value="5">
+            <div class="rating-circle">5</div>
+            <span class="rating-label">Extremely useful</span>
+          </label>
         </div>
-      </section>
+      </div>
+      
+      <button type="submit" class="submit-btn">Submit Feedback</button>
+    </form>
+
+    <div class="closing">
+      <p>Every response is read carefully. Thank you for helping to improve the work and push the framework further.</p>
+    </div>
+  </div>
+</section>
     </main>
 
     <footer>
