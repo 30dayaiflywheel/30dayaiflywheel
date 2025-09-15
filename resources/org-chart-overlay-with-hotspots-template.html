@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Org Chart Overlay with AI Workflows – Excel Diagram</title>
+  <meta name="title" content="Org Chart Overlay with AI Workflows – Excel Diagram">
+  <meta name="description" content="Free Excel diagram to overlay AI workflows on your org chart. See where value exists today, what’s scaling, and the next cycles to launch.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://30dayaiflywheel.com/resources/org-chart-ai-overlay.html">
+  <meta property="og:title" content="Org Chart Overlay with AI Workflows – Excel Diagram">
+  <meta property="og:description" content="Turn scattered projects into a connected system. Map current AI wins and mark the next three target areas. Free Excel download.">
+  <meta property="og:image" content="https://30dayaiflywheel.com/flywheel.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://30dayaiflywheel.com/resources/org-chart-ai-overlay.html">
+  <meta name="twitter:title" content="Org Chart Overlay with AI Workflows – Excel Diagram">
+  <meta name="twitter:description" content="Turn scattered projects into a connected system. Map current AI wins and mark the next three target areas. Free Excel download.">
+  <meta name="twitter:image" content="https://30dayaiflywheel.com/flywheel.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background:#fff; color:#333; line-height:1.6; overflow-x:hidden; padding-top:20px; }
+    .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+    /* Navigation */
+    .topnav {
+      background:#fff; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      border-radius:8px; display:flex; justify-content:space-between; align-items:center;
+      padding:0 20px; height:70px; margin-bottom:30px;
+    }
+    .logo-container { display:flex; align-items:center; }
+    .logo { width:50px; height:50px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-right:10px; }
+    .logo img { width:50px; height:50px; display:block; border-radius:8px; }
+    .logo-text { font-size:1.2rem; font-weight:600; color:#2c3e50; }
+    .nav-links { display:flex; align-items:center; }
+    .topnav a {
+      color:#333; text-align:center; padding:12px 16px; text-decoration:none;
+      font-size:1rem; font-weight:500; border-radius:4px; margin:0 5px; transition:all .3s ease;
+    }
+    .topnav a:hover, .topnav a.active { background:#ff9900; color:#fff; }
+    .topnav .icon { display:none; color:#2c3e50; font-size:1.5rem; cursor:pointer; padding:10px; background:transparent; border:0; }
+
+    /* Header */
+    header { text-align:center; padding:20px 0; border-bottom:1px solid #f0f0f0; position:relative; margin-bottom:30px; }
+    h1 { font-size:2.5rem; margin-bottom:10px; color:#2c3e50; }
+    h2 { font-size:1.8rem; margin:0 0 15px; color:#2c3e50; text-align:center; }
+    h3 { font-size:1.4rem; margin:20px 0 12px; color:#2c3e50; }
+    .subtitle { font-size:1.1rem; color:#7f8c8d; margin-bottom:0; }
+
+    /* Resource layout */
+    .resource-hero { display:grid; grid-template-columns: 1.1fr 0.9fr; gap:24px; align-items:start; }
+    .card { background:#f8f9fa; border-radius:8px; padding:24px; }
+    .meta { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+    .meta span { display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid #eee; border-radius:20px; padding:6px 10px; font-size:.9rem; color:#555; }
+    .benefits { margin-top:16px; }
+    .benefits ul, .benefits ol { margin-left:18px; }
+    .benefits li { margin:8px 0; }
+
+    .preview { display:flex; flex-direction:column; gap:16px; }
+    .preview .img-wrap { background:#fff; border:1px solid #eee; border-radius:8px; padding:12px; display:flex; justify-content:center; align-items:center; min-height:260px; }
+    .preview img { max-width:100%; height:auto; border-radius:6px; }
+    .thumbs { display:flex; gap:12px; align-items:center; }
+    .thumbs img { width:48px; height:48px; object-fit:contain; border:1px solid #eee; background:#fff; border-radius:6px; }
+
+    .download-panel { background:#fff; border:1px solid #eee; border-radius:8px; padding:20px; }
+    .download-btn {
+      background:#2ecc71; color:#fff; padding:14px 16px; font-size:1.05rem; font-weight:700; border:none;
+      border-radius:6px; cursor:pointer; transition:filter .2s ease; width:100%;
+      display:inline-flex; align-items:center; justify-content:center; gap:10px; text-decoration:none;
+    }
+    .download-btn:hover { filter:brightness(0.95); }
+    .small { font-size:.92rem; color:#666; margin-top:10px; }
+    .steps { margin-top:12px; }
+    .steps ol { margin-left:18px; }
+    .steps li { margin:8px 0; }
+
+    footer { text-align:center; padding:25px 0; color:#7f8c8d; font-size:.9rem; border-top:1px solid #f0f0f0; margin-top:30px; }
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .container { padding:0 15px; }
+      h1 { font-size:2.2rem; }
+      h2 { font-size:1.6rem; }
+    }
+    @media (max-width:900px){
+      .resource-hero { grid-template-columns: 1fr; }
+    }
+    @media (max-width:768px){
+      .topnav { padding:0 15px; position:relative; }
+      .topnav .icon { display:block; }
+      .nav-links { display:none; width:100%; }
+      .topnav.open { flex-direction:column; height:auto; padding:15px; align-items:flex-start; }
+      .topnav.open .logo-container { width:100%; margin-bottom:15px; }
+      .topnav.open .nav-links { display:flex; flex-direction:column; width:100%; }
+      .topnav.open .nav-links a { display:block; width:100%; text-align:left; margin:5px 0; padding:10px; }
+    }
+    @media (max-width:480px){
+      header { padding:25px 0 15px; }
+      h1 { font-size:1.8rem; }
+      h2 { font-size:1.5rem; margin:20px 0 12px; }
+      h3 { font-size:1.3rem; }
+      .logo-text { font-size:1rem; }
+      .topnav { height:60px; }
+      .logo { width:40px; height:40px; }
+      .logo img { width:40px; height:40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <div class="topnav" id="siteNav">
+      <div class="logo-container">
+        <div class="logo"><img src="/flywheel.png" width="50" height="50" alt="30 Day AI Flywheel logo"></div>
+        <div class="logo-text"><a href="/" style="color:#2c3e50; text-decoration:none;">30 Day AI Flywheel</a></div>
+      </div>
+
+      <!-- Hamburger button -->
+      <button class="icon" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleNav(this)">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="/">Book</a>
+        <a href="/consultancy.html">Consultancy</a>
+        <a href="/resources">Resources</a>
+      </div>
+    </div>
+
+    <header>
+      <h1>Org Chart Overlay with AI Workflows – Excel Diagram</h1>
+      <p class="subtitle">See where AI is driving value today — and where the next cycles should start. Turn scattered projects into a connected system.</p>
+    </header>
+
+    <main>
+      <section class="resource-hero">
+        <!-- Left: description and details -->
+        <div class="card">
+          <h2>What you get</h2>
+          <div class="meta" aria-label="File details">
+            <span><i class="fa-solid fa-file-excel"></i> XLSX</span>
+            <span><i class="fa-solid fa-weight-hanging"></i> ~95 KB</span>
+            <span><i class="fa-solid fa-rotate"></i> v1.0</span>
+            <span><i class="fa-solid fa-calendar"></i> Updated Sep 2025</span>
+          </div>
+
+          <div class="benefits">
+            <h3>Why it matters</h3>
+            <p>Most businesses trial AI in one or two departments, then stall. An org chart overlay makes it clear where AI creates value today and where the next logical cycles should start — aligning leaders on a single adoption plan.</p>
+          </div>
+
+          <div class="benefits">
+            <h3>What the diagram shows</h3>
+            <ul>
+              <li>Your org chart with departments/functions as boxes.</li>
+              <li>Overlaid AI workflows as labelled arrows/tags.</li>
+              <li>Status colours: <em>Pilot</em>, <em>Scaling</em>, <em>Next Up</em>.</li>
+              <li>Callouts for metric moved (revenue, cost, time, CX) and owner.</li>
+              <li>A legend to keep the view consistent in leadership decks.</li>
+            </ul>
+          </div>
+
+          <div class="benefits">
+            <h3>Inside the file</h3>
+            <ul>
+              <li><strong>Overlay</strong> — editable org chart with drag-and-drop workflow tags.</li>
+              <li><strong>Workflows Table</strong> — Dept, Process, Use Case, Status (Pilot/Scaling/Next Up), Metric, Owner, Notes.</li>
+              <li><strong>Legend &amp; Status</strong> — colour keys and guidance.</li>
+              <li><strong>Poster</strong> — clean one-pager for workshops and leadership meetings.</li>
+            </ul>
+          </div>
+
+          <div class="benefits">
+            <h3>Example</h3>
+            <p>A mid-sized manufacturer ran cycles in Sales and Marketing only. Mapping workflows onto the org chart revealed untapped value in Operations and Finance. Within two cycles they launched demand forecasting and invoice automation — doubling total ROI.</p>
+          </div>
+        </div>
+
+        <!-- Right: preview and download -->
+        <div class="preview">
+          <div class="img-wrap">
+            <img src="/resources/images/org-chart-ai-overlay-preview.png" alt="Preview of the Org Chart Overlay with AI Workflows Excel diagram (placeholder)">
+          </div>
+          <div class="thumbs" aria-label="File imagery">
+            <img src="/resources/images/excel-icon.png" alt="Excel file icon">
+            <img src="/resources/images/org-chart-ai-overlay-cover.png" alt="Org Chart Overlay cover image (placeholder)">
+          </div>
+
+          <div class="download-panel">
+            <a class="download-btn" href="/downloads/org-chart-ai-overlay.xlsx" download>
+              <i class="fa-solid fa-download" aria-hidden="true"></i>
+              Download the Excel file
+            </a>
+            <p class="small">File: <code>org-chart-ai-overlay.xlsx</code></p>
+
+            <div class="steps">
+              <h3>How to use</h3>
+              <ol>
+                <li>Download the diagram.</li>
+                <li>If it opens in your browser, save it:
+                  <ul>
+                    <li>Windows: press <strong>Ctrl + S</strong> or right-click &amp; choose <strong>Save as</strong>.</li>
+                    <li>Mac: press <strong>Cmd + S</strong> or control-click &amp; choose <strong>Save as</strong>.</li>
+                  </ul>
+                </li>
+                <li>Add your org structure (edit boxes or paste a PNG).</li>
+                <li>List active and planned AI workflows in the table; link them on the overlay.</li>
+                <li>Mark status (Pilot/Scaling/Next Up) and the metric moved; share in leadership.</li>
+              </ol>
+            </div>
+
+            <p class="small" id="thanks" style="display:none;">Thanks for downloading. You can also find this in the Resource Hub.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:24px;">
+        <h2>Action step</h2>
+        <p>Take your org chart and overlay planned AI cycles. Mark the next three target areas and share at your next leadership meeting to align priorities.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 30 Day AI Flywheel. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu
+    function toggleNav(btn){
+      const nav = document.getElementById('siteNav');
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    // Close menu on link click (mobile)
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('siteNav');
+        if (window.innerWidth <= 768 && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          const btn = document.querySelector('.topnav .icon');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Download acknowledgement
+    const dlBtn = document.querySelector('.download-btn');
+    if (dlBtn) {
+      dlBtn.addEventListener('click', function(){
+        const msg = document.getElementById('thanks');
+        if (msg) msg.style.display = 'block';
+      });
+    }
+  </script>
+</body>
+</html>
