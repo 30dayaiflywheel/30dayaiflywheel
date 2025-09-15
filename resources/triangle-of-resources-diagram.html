@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triangle of Resources – Excel Diagram</title>
+  <meta name="title" content="Triangle of Resources – Excel Diagram">
+  <meta name="description" content="Free Excel diagram showing how the Book, Templates, and Online Hub connect. Use it to explain how the system stays fast, clear, and repeatable.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://30dayaiflywheel.com/resources/triangle-of-resources.html">
+  <meta property="og:title" content="Triangle of Resources – Excel Diagram">
+  <meta property="og:description" content="Show the link between Book, Templates, and Online Hub. Free Excel download.">
+  <meta property="og:image" content="https://30dayaiflywheel.com/flywheel.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://30dayaiflywheel.com/resources/triangle-of-resources.html">
+  <meta name="twitter:title" content="Triangle of Resources – Excel Diagram">
+  <meta name="twitter:description" content="Show the link between Book, Templates, and Online Hub. Free Excel download.">
+  <meta name="twitter:image" content="https://30dayaiflywheel.com/flywheel.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background:#fff; color:#333; line-height:1.6; overflow-x:hidden; padding-top:20px; }
+    .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+    /* Navigation */
+    .topnav {
+      background:#fff; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      border-radius:8px; display:flex; justify-content:space-between; align-items:center;
+      padding:0 20px; height:70px; margin-bottom:30px;
+    }
+    .logo-container { display:flex; align-items:center; }
+    .logo { width:50px; height:50px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-right:10px; }
+    .logo img { width:50px; height:50px; display:block; border-radius:8px; }
+    .logo-text { font-size:1.2rem; font-weight:600; color:#2c3e50; }
+    .nav-links { display:flex; align-items:center; }
+    .topnav a {
+      color:#333; text-align:center; padding:12px 16px; text-decoration:none;
+      font-size:1rem; font-weight:500; border-radius:4px; margin:0 5px; transition:all .3s ease;
+    }
+    .topnav a:hover, .topnav a.active { background:#ff9900; color:#fff; }
+    .topnav .icon { display:none; color:#2c3e50; font-size:1.5rem; cursor:pointer; padding:10px; background:transparent; border:0; }
+
+    /* Header */
+    header { text-align:center; padding:20px 0; border-bottom:1px solid #f0f0f0; position:relative; margin-bottom:30px; }
+    h1 { font-size:2.5rem; margin-bottom:10px; color:#2c3e50; }
+    h2 { font-size:1.8rem; margin:0 0 15px; color:#2c3e50; text-align:center; }
+    h3 { font-size:1.4rem; margin:20px 0 12px; color:#2c3e50; }
+    .subtitle { font-size:1.1rem; color:#7f8c8d; margin-bottom:0; }
+
+    /* Resource layout */
+    .resource-hero { display:grid; grid-template-columns: 1.1fr 0.9fr; gap:24px; align-items:start; }
+    .card { background:#f8f9fa; border-radius:8px; padding:24px; }
+    .meta { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+    .meta span { display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid #eee; border-radius:20px; padding:6px 10px; font-size:.9rem; color:#555; }
+    .benefits { margin-top:16px; }
+    .benefits ul { margin-left:18px; }
+    .benefits li { margin:8px 0; }
+
+    .preview { display:flex; flex-direction:column; gap:16px; }
+    .preview .img-wrap { background:#fff; border:1px solid #eee; border-radius:8px; padding:12px; display:flex; justify-content:center; align-items:center; min-height:260px; }
+    .preview img { max-width:100%; height:auto; border-radius:6px; }
+    .thumbs { display:flex; gap:12px; align-items:center; }
+    .thumbs img { width:48px; height:48px; object-fit:contain; border:1px solid #eee; background:#fff; border-radius:6px; }
+
+    .download-panel { background:#fff; border:1px solid #eee; border-radius:8px; padding:20px; }
+    .download-btn {
+      background:#2ecc71; color:#fff; padding:14px 16px; font-size:1.05rem; font-weight:700; border:none;
+      border-radius:6px; cursor:pointer; transition:filter .2s ease; width:100%;
+      display:inline-flex; align-items:center; justify-content:center; gap:10px; text-decoration:none;
+    }
+    .download-btn:hover { filter:brightness(0.95); }
+    .small { font-size:.92rem; color:#666; margin-top:10px; }
+    .steps { margin-top:12px; }
+    .steps ol { margin-left:18px; }
+    .steps li { margin:8px 0; }
+
+    footer { text-align:center; padding:25px 0; color:#7f8c8d; font-size:.9rem; border-top:1px solid #f0f0f0; margin-top:30px; }
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .container { padding:0 15px; }
+      h1 { font-size:2.2rem; }
+      h2 { font-size:1.6rem; }
+    }
+    @media (max-width:900px){
+      .resource-hero { grid-template-columns: 1fr; }
+    }
+    @media (max-width:768px){
+      .topnav { padding:0 15px; position:relative; }
+      .topnav .icon { display:block; }
+      .nav-links { display:none; width:100%; }
+      .topnav.open { flex-direction:column; height:auto; padding:15px; align-items:flex-start; }
+      .topnav.open .logo-container { width:100%; margin-bottom:15px; }
+      .topnav.open .nav-links { display:flex; flex-direction:column; width:100%; }
+      .topnav.open .nav-links a { display:block; width:100%; text-align:left; margin:5px 0; padding:10px; }
+    }
+    @media (max-width:480px){
+      header { padding:25px 0 15px; }
+      h1 { font-size:1.8rem; }
+      h2 { font-size:1.5rem; margin:20px 0 12px; }
+      h3 { font-size:1.3rem; }
+      .logo-text { font-size:1rem; }
+      .topnav { height:60px; }
+      .logo { width:40px; height:40px; }
+      .logo img { width:40px; height:40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <div class="topnav" id="siteNav">
+      <div class="logo-container">
+        <div class="logo"><img src="/flywheel.png" width="50" height="50" alt="30 Day AI Flywheel logo"></div>
+        <div class="logo-text"><a href="/" style="color:#2c3e50; text-decoration:none;">30 Day AI Flywheel</a></div>
+      </div>
+
+      <!-- Hamburger button -->
+      <button class="icon" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleNav(this)">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="/">Book</a>
+        <a href="/consultancy.html">Consultancy</a>
+        <a href="/resources">Resources</a>
+      </div>
+    </div>
+
+    <header>
+      <h1>Triangle of Resources – Excel Diagram</h1>
+      <p class="subtitle">The Book, Templates, and Online Hub work together. Use this diagram to show how the system stays fast and repeatable.</p>
+    </header>
+
+    <main>
+      <section class="resource-hero">
+        <!-- Left: description and details -->
+        <div class="card">
+          <h2>What you get</h2>
+          <div class="meta" aria-label="File details">
+            <span><i class="fa-solid fa-file-excel"></i> XLSX</span>
+            <span><i class="fa-solid fa-weight-hanging"></i> ~95 KB</span>
+            <span><i class="fa-solid fa-rotate"></i> v1.0</span>
+            <span><i class="fa-solid fa-calendar"></i> Updated Sep 2025</span>
+          </div>
+
+          <div class="benefits">
+            <h3>Why download it</h3>
+            <ul>
+              <li>Explain the link between book, templates, and hub in one slide.</li>
+              <li>Set clear roles so teams know where to look for what.</li>
+              <li>Make your ways of working easy to teach and repeat.</li>
+            </ul>
+          </div>
+
+          <div class="benefits">
+            <h3>What the triangle covers</h3>
+            <ul>
+              <li><strong>The Book:</strong> strategy, structure, and case studies.</li>
+              <li><strong>Templates:</strong> worksheets, trackers, and playbooks to turn ideas into actions.</li>
+              <li><strong>The Online Hub:</strong> a live library with the latest tools and downloads for teams.</li>
+            </ul>
+          </div>
+
+          <div class="benefits">
+            <h3>How the triangle works</h3>
+            <ul>
+              <li>The book explains what to do.</li>
+              <li>The templates make it fast to do.</li>
+              <li>The hub keeps everything current as tools and practices change.</li>
+            </ul>
+            <p>Used together, the system is repeatable. Run a workshop from the book, fill the templates with your team, and pull updates from the hub when you need them.</p>
+          </div>
+
+          <div class="benefits">
+            <h3>Lesson</h3>
+            <p>Relying on one corner slows you down. Reading without templates leaves actions vague. Templates without context feel mechanical. The hub without the book lacks structure. Use the full triangle for speed, clarity, and repeatability.</p>
+          </div>
+        </div>
+
+        <!-- Right: preview and download -->
+        <div class="preview">
+          <div class="img-wrap">
+            <!-- Placeholder preview image of the file -->
+            <img src="/resources/images/triangle-of-resources-preview.png" alt="Preview of the Triangle of Resources Excel diagram (placeholder)">
+          </div>
+          <div class="thumbs" aria-label="File imagery">
+            <img src="/resources/images/excel-icon.png" alt="Excel file icon">
+            <img src="/resources/images/triangle-of-resources-cover.png" alt="Diagram cover image (placeholder)">
+          </div>
+
+          <div class="download-panel">
+            <!-- Replace the href with your real file path -->
+            <a class="download-btn" href="/downloads/triangle-of-resources.xlsx" download>
+              <i class="fa-solid fa-download" aria-hidden="true"></i>
+              Download the Excel file
+            </a>
+            <p class="small">File: <code>triangle-of-resources.xlsx</code></p>
+
+            <div class="steps">
+              <h3>How to use</h3>
+              <ol>
+                <li>Click the button above to download.</li>
+                <li>If it opens in your browser, save it:
+                  <ul>
+                    <li>Windows: press <strong>Ctrl + S</strong> or right click and choose <strong>Save as</strong>.</li>
+                    <li>Mac: press <strong>Cmd + S</strong> or control click and choose <strong>Save as</strong>.</li>
+                  </ul>
+                </li>
+                <li>Drop the diagram into your deck or print it for workshops.</li>
+                <li>Share with your team so everyone knows how to access each element.</li>
+              </ol>
+            </div>
+
+            <p class="small" id="thanks" style="display:none;">Thanks for downloading. You can also find this in the Resource Hub.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:24px;">
+        <h2>Action step</h2>
+        <p>Share the triangle with your team before your first cycle. Make sure everyone can access the book, the templates, and the hub.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 30 Day AI Flywheel. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu
+    function toggleNav(btn){
+      const nav = document.getElementById('siteNav');
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    // Close menu on link click (mobile)
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('siteNav');
+        if (window.innerWidth <= 768 && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          const btn = document.querySelector('.topnav .icon');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Download acknowledgement
+    const dlBtn = document.querySelector('.download-btn');
+    if (dlBtn) {
+      dlBtn.addEventListener('click', function(){
+        const msg = document.getElementById('thanks');
+        if (msg) msg.style.display = 'block';
+      });
+    }
+  </script>
+</body>
+</html>
