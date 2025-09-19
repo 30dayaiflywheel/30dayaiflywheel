@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expert-Level Prompts Library - 30 Day AI Flywheel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Base + type */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background:#fff; color:#333; line-height:1.6; overflow-x:hidden; padding-top:20px; }
+    .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+    /* Top navigation */
+    .topnav { background:#fff; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1); border-radius:8px; display:flex; justify-content:space-between; align-items:center; padding:0 20px; height:70px; margin-bottom:30px; }
+    .logo-container { display:flex; align-items:center; }
+    .logo { width:50px; height:50px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-right:-10px; }
+    .logo img { width:50px; height:50px; display:block; border-radius:8px; }
+    .logo-text { font-size:1.2rem; font-weight:600; color:#2c3e50; }
+    .logo-text a { color:#2c3e50; text-decoration:none; }
+    .nav-links { display:flex; align-items:center; }
+    .topnav a { color:#333; text-align:center; padding:12px 16px; text-decoration:none; font-size:1rem; font-weight:500; border-radius:4px; margin:0 5px; transition:all .3s ease; }
+    .topnav a:hover, .topnav a.active { background:#ff9900; color:#fff; }
+    .topnav .icon { display:none; color:#2c3e50; font-size:1.5rem; cursor:pointer; padding:10px; background:transparent; border:0; }
+
+    header { text-align:center; padding:30px 0 20px; border-bottom:1px solid #f0f0f0; position:relative; }
+    h1 { font-size:2.4rem; margin-bottom:10px; color:#2c3e50; }
+    h2 { font-size:1.7rem; margin:25px 0 15px; color:#2c3e50; }
+    h3 { font-size:1.2rem; margin:16px 0 10px; color:#2c3e50; }
+    .subtitle { font-size:1.15rem; color:#7f8c8d; margin-bottom:0; }
+
+    .intro { padding:24px 0; text-align:center; max-width:900px; margin:0 auto; }
+    .intro p { margin-bottom:10px; font-size:1.05rem; }
+
+    /* Sections */
+    .sections { margin:30px 0 40px; }
+    .category { border:1px solid #ececec; border-radius:10px; margin-bottom:18px; background:#fff; overflow:hidden; }
+    .category summary { cursor:pointer; list-style:none; padding:16px 18px; background:#f9fafb; font-weight:600; display:flex; align-items:center; justify-content:space-between; }
+    .category summary:focus { outline:2px solid #ff9900; border-radius:8px; }
+    .category[open] summary { background:#fff4e6; }
+    .category-content { padding:18px; border-top:1px solid #f2f2f2; }
+
+    /* Prompt cards */
+    .prompts-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:16px; }
+    .prompt-card { border:1px solid #eaeaea; border-radius:10px; padding:14px; background:#fff; display:flex; flex-direction:column; gap:10px; }
+    .prompt-title { font-weight:700; color:#2c3e50; font-size:1rem; }
+    .prompt-body { position:relative; }
+    textarea.prompt-text { width:100%; min-height:150px; border:1px solid #ddd; border-radius:8px; padding:12px; resize:vertical; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.95rem; background:#fcfcfc; }
+    .prompt-actions { display:flex; gap:8px; justify-content:flex-end; }
+    .btn { border:none; border-radius:8px; padding:10px 12px; cursor:pointer; font-weight:600; background:#ff9900; color:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.08); transition:transform .05s ease, background .2s ease; }
+    .btn:hover { background:#e68a00; }
+    .btn:active { transform:translateY(1px); }
+
+    footer { text-align:center; padding:25px 0; color:#7f8c8d; font-size:.9rem; border-top:1px solid #f0f0f0; margin-top:30px; }
+
+    /* Responsive */
+    @media (max-width:1024px){ .container { padding:0 15px; } h1 { font-size:2.1rem; } h2 { font-size:1.5rem; } }
+    @media (max-width:768px){ .topnav { padding:0 15px; position:relative; } .topnav .icon { display:block; } .nav-links { display:none; width:100%; } .topnav.open { flex-direction:column; height:auto; padding:15px; align-items:flex-start; } .topnav.open .logo-container { width:100%; margin-bottom:15px; } .topnav.open .nav-links { display:flex; flex-direction:column; width:100%; } .topnav.open .nav-links a { display:block; width:100%; text-align:left; margin:5px 0; padding:10px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top navigation -->
+    <div class="topnav" id="siteNav">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="/" aria-label="Home">
+            <img src="/flywheel.png" width="50" height="50" alt="30 Day AI Flywheel logo">
+          </a>
+        </div>
+        <div class="logo-text"><a href="/">30 Day AI Flywheel</a></div>
+      </div>
+      <button class="icon" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleNav(this)"><i class="fas fa-bars"></i></button>
+      <div class="nav-links" id="navLinks">
+        <a href="/">Book</a>
+        <a href="consultancy.html">Consultancy</a>
+        <a href="resources.html" class="active">Resources</a>
+      </div>
+    </div>
+
+    <header>
+      <h1>Expert-Level Prompts Library</h1>
+      <p class="subtitle">Sales, Marketing, Customer Service, Operations, Finance, Human Resources, IT / Security, R&D / Product Development, Executive / Strategy, Legal & Compliance, Procurement, Facilities / Workplace Management</p>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p>This page gives you ready-to-use prompts for the main business functions. They are short, direct, and built for real work. Copy, paste, and feed in your data. Where a prompt says “I will paste…”, add your notes or files and run it. Use these to speed up analysis, improve handovers, and make better calls with less back and forth.</p>
+      </section>
+
+      <section class="sections">
+        <!-- SALES -->
+        <details class="category" open>
+          <summary>Sales – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+          <div class="category-content">
+            <div class="prompts-grid">
+              <div class="prompt-card"><div class="prompt-title">1) Lead Scoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a sales analyst. I will paste a list of leads with some background notes. Score each lead out of 10 for conversion likelihood. In your answer, provide a table with columns: Lead Name, Key Signals, Score, Short Rationale. Keep rationale to 1–2 sentences per lead, using plain English.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">2) Call Summaries</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are acting as a sales assistant. I will paste the transcript of a sales call. Summarise it in under 200 words, structured into 3 sections: (1) Key customer needs, (2) Objections or concerns, (3) Next steps agreed. Write in clear professional language, avoiding jargon. End with a one-line recommendation on how the rep should follow up.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">3) Pipeline Forecasting</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a revenue forecaster. I will paste a list of open deals with details on stage, value, and expected close date. Produce a forecast showing likely revenue this quarter. Structure the answer as: (1) total forecasted revenue, (2) confidence range, (3) short commentary on risks. Keep under 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">4) Proposal Drafting</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a sales proposal writer. Draft a client proposal for [product/service]. Use the following structure: (1) executive summary, (2) client challenges, (3) proposed solution, (4) pricing options, (5) next steps. Write in professional but persuasive language, under 500 words. Leave placeholders for client name and pricing figures.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">5) Account Insights</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a sales intelligence assistant. I will paste recent notes and activity logs for an account. Summarise the account status under three headings: (1) Opportunities, (2) Risks, (3) Recommended Next Action. Limit to 150 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">6) Territory Optimisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a sales operations planner. I will paste a list of territories with accounts and potential revenue. Suggest an optimal allocation across sales reps. Present in a table with columns: Territory, Accounts, Suggested Rep, Rationale. Keep rationales to 1–2 sentences.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">7) Deal Risk Scoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a deal desk analyst. I will paste details of deals in progress. Score each deal on risk of stalling (High, Medium, Low). Provide a table with columns: Deal Name, Stage, Risk Level, Reason for Score. Keep reasons short and direct.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">8) Price Optimisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a pricing strategist. I will paste product details and a client profile. Suggest 3 pricing options: (1) standard, (2) bundled, (3) discounted. For each option, give a 1–2 sentence rationale and expected impact on conversion. Present in a table format.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">9) Competitor Intelligence</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a competitive intelligence analyst. I will paste notes about a competitor. Summarise the key points in bullet form under 3 headings: (1) Strengths, (2) Weaknesses, (3) Implications for our sales team. Limit to 200 words total.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">10) Sales Training Feedback</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a sales coach. I will paste a transcript of a sales rep call. Provide feedback under 4 headings: (1) Rapport building, (2) Discovery questions, (3) Handling objections, (4) Closing techniques. Keep feedback specific and practical. Limit to 250 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+            </div>
+          </div>
+        </details>
+
+        <!-- MARKETING -->
+        <details class="category">
+          <summary>Marketing – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+          <div class="category-content">
+            <div class="prompts-grid">
+              <div class="prompt-card"><div class="prompt-title">1) Ad Targeting</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a digital advertising strategist. I will paste a description of my target market. Suggest 5 audience targeting approaches for LinkedIn and Google Ads. For each, include: Audience Definition, Why It Works, Potential Risk. Present in a table.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">2) Content Generation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a content writer. Draft a 600-word blog post on [topic]. Structure it with: (1) headline, (2) introduction, (3) 3–4 subheadings with content, (4) conclusion with a clear CTA. Write in a confident, professional tone. Avoid filler and clichés.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">3) Customer Segmentation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a marketing analyst. I will paste customer data (demographics, behaviour, spend). Create 3–5 segments. For each segment, provide: Name, Defining Traits, Preferred Channels, Key Message. Present in a table.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">4) Brand Monitoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a brand reputation analyst. I will paste a set of online mentions and reviews. Summarise them into: (1) overall sentiment (positive/neutral/negative), (2) recurring themes, (3) recommended response actions. Limit to 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">5) Personalised Recommendations</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a retention marketer. Based on this customer purchase history (pasted below), suggest 5 personalised product or content recommendations. For each, explain why it is relevant in 1 sentence. Present as a bullet list.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">6) Creative Testing</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a creative testing expert. I will paste current ad copy. Generate 5 alternative variations optimised for A/B testing. Each should include: headline, body text, and CTA. Vary tone and approach while staying aligned to the brand.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">7) Churn Prediction</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a customer success analyst. I will paste a dataset of customer behaviours. Identify which 5 customers are most at risk of churn and why. Present in a table: Customer, Signals of Risk, Suggested Action. Keep explanations short.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">8) Marketing Mix Modelling</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a marketing analyst. I will paste recent spend and performance data across channels. Provide a short summary of which channels are driving the highest ROI, which are underperforming, and how budget could be reallocated. Limit to 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">9) SEO Content Optimisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an SEO strategist. I will paste a draft blog post. Suggest improvements to optimise for search: (1) recommended keywords, (2) headline tweaks, (3) meta description draft, (4) internal/external link suggestions. Keep recommendations concise.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">10) Campaign Reporting Automation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a marketing analyst. I will paste campaign performance data from different platforms. Summarise it in a unified report with: (1) key results, (2) best performing channel, (3) worst performing channel, (4) suggested next step. Limit to 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+            </div>
+          </div>
+        </details>
+
+        <!-- CUSTOMER SERVICE -->
+        <details class="category">
+          <summary>Customer Service – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+          <div class="category-content">
+            <div class="prompts-grid">
+              <div class="prompt-card"><div class="prompt-title">1) Chat Assistants</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a chatbot script writer. Draft 5 response templates for the most common customer questions about [topic, e.g., shipping delays]. Each template should be under 80 words, polite, and solution-focused. Write in plain English. Provide them as numbered items.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">2) Automated Ticket Routing</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a service operations analyst. I will paste a batch of customer support tickets. Classify each into categories (e.g., Billing, Technical, General). Present in a table: Ticket ID, Category, Urgency (High/Medium/Low), Suggested Team. Keep explanations short.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">3) Sentiment Analysis</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a sentiment analyst. I will paste 10 customer emails. For each, identify sentiment (Positive, Neutral, Negative) and extract one short sentence that shows why. Present in a table: Email ID, Sentiment, Key Phrase.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">4) Voice Analytics</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a quality assurance reviewer. I will paste a transcript of a customer service call. Identify: (1) recurring issues mentioned, (2) whether the agent followed protocol, (3) opportunities to improve tone or clarity. Limit to 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">5) Predictive Escalation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a support risk analyst. I will paste customer interaction history. Flag any that appear at risk of escalation. Present a table with: Customer Name, Escalation Risk (High/Medium/Low), Reason for Risk, Suggested Next Step.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">6) Multilingual Support</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a live chat translator. I will paste a customer message in another language. Translate it into professional English, then draft a reply in both English and the original language. Keep it concise and polite, under 100 words per reply.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">7) Customer Journey Insights</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a customer journey analyst. I will paste logs from a customer interaction across email, chat, and calls. Summarise the journey in 150 words: (1) what the customer was trying to achieve, (2) main obstacles, (3) final outcome. End with 1 suggestion to improve the experience.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">8) Automated Knowledge Base Updates</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a documentation assistant. I will paste a set of customer questions. Turn them into a draft knowledge base article with: (1) Title, (2) Short Introduction, (3) Step-by-Step Solution, (4) Closing Note. Write in plain, professional language.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">9) Service Quality Scoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a service quality assessor. I will paste a transcript of a customer support chat. Score it on a scale of 1–5 for (1) Politeness, (2) Accuracy, (3) Resolution Effectiveness. Provide a 1-sentence justification for each score.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+              <div class="prompt-card"><div class="prompt-title">10) Workforce Forecasting</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a workforce planner. I will paste a dataset of ticket volumes over time. Predict the expected workload for the next month. Present a table with Week, Predicted Volume, Suggested Staffing Level. Keep your explanation under 100 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+            </div>
+          </div>
+        </details>
+
+
+<!-- OPERATIONS -->
+<details class="category">
+  <summary>Operations – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+  <div class="category-content">
+    <div class="prompts-grid">
+      <div class="prompt-card"><div class="prompt-title">1) Inventory Forecasting</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a supply chain analyst. I will paste historical sales data. Forecast next month’s inventory needs. Present in a table with Product, Predicted Demand, Suggested Order Quantity. Add a 2-sentence note on potential risks (e.g., seasonality, supply delays).”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">2) Quality Control</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a quality manager. I will paste a list of product defect reports. Summarise recurring issues into categories and suggest 1 preventive action per category. Present in a table: Defect Category, Frequency, Suggested Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">3) Workflow Automation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a process improvement consultant. I will paste a workflow description. Identify steps that can be automated with simple tools (email templates, document generation, approvals). Present as a numbered list with Step, Automation Idea, Expected Benefit.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">4) Supply Chain Optimisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a logistics strategist. I will paste delivery and supplier performance data. Recommend 3 improvements to reduce costs or delays. Structure as bullet points with a 1–2 sentence explanation for each.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">5) Predictive Maintenance</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a maintenance planner. I will paste machine performance logs. Highlight which machines are likely to fail soon. Present in a table: Machine ID, Warning Signal, Probability of Failure, Suggested Maintenance Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">6) Demand Forecasting</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a demand planner. I will paste past sales and promotion data. Forecast demand for the next quarter and highlight any anomalies. Provide: (1) Expected Sales Trend, (2) Potential Risks, (3) Suggested Action. Keep under 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">7) Scheduling Optimisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a shift planner. I will paste staff availability and workload needs. Create an optimised weekly schedule. Present as a table: Day, Shift, Assigned Staff. Ensure workload is balanced fairly.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">8) Process Mining</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a process analyst. I will paste system logs. Identify 3 bottlenecks in the workflow. For each bottleneck, explain the cause in 1–2 sentences and suggest a fix.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">9) Energy Management</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an energy efficiency consultant. I will paste building energy usage data. Summarise the top 3 areas of high consumption and suggest 1 practical reduction measure for each. Present in a table: Area, Consumption Level, Suggested Measure.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">10) Supplier Risk Monitoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a procurement risk analyst. I will paste supplier performance notes and financial news extracts. Identify suppliers at risk of disruption. Present in a table: Supplier, Risk Type, Risk Level (High/Medium/Low), Recommended Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+    </div>
+  </div>
+</details>
+
+<!-- FINANCE -->
+<details class="category">
+  <summary>Finance – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+  <div class="category-content">
+    <div class="prompts-grid">
+      <div class="prompt-card"><div class="prompt-title">1) Invoice Processing</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a finance assistant. I will paste text from several invoices. Extract key fields into a table: Supplier, Invoice Number, Date, Amount, Due Date. Flag any invoices missing data. Keep the format clean.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">2) Expense Categorisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an accountant. I will paste a list of expenses. Categorise each into a standard chart of accounts (e.g., Travel, Office Supplies, Marketing). Present in a table: Expense Item, Category, Reason for Category. Keep reasons short, 1 sentence max.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">3) Fraud Detection</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a fraud analyst. I will paste recent transaction data. Identify entries that look suspicious and explain why. Present in a table: Transaction ID, Suspicious Pattern, Risk Level (High/Medium/Low), Suggested Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">4) Cash Flow Forecasting</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a financial planner. I will paste revenue and expense data. Forecast cash flow for the next 3 months. Present in a table with Month, Inflows, Outflows, Net Cash Position. Add a 2-sentence risk note at the end.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">5) Revenue Recognition</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a finance controller. I will paste a set of contracts with payment schedules. Summarise when revenue should be recognised. Present in a table: Contract ID, Total Value, Recognition Schedule, Notes. Keep explanations concise.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">6) Audit Support</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an audit assistant. I will paste transaction records. Identify anomalies or missing documentation. Summarise them as bullet points, with a 1-sentence description for each anomaly. Limit to 150 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">7) Tax Optimisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a tax advisor. I will paste company expenses and revenue notes. Suggest 3 potential deductions or optimisations based on common tax rules. Present as a bullet list with 1–2 sentences of explanation each.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">8) Budget Variance Analysis</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a finance analyst. I will paste a budget vs actuals report. Summarise into 3 sections: (1) Major overspends, (2) Major underspends, (3) Suggested corrective actions. Keep the whole summary under 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">9) Credit Risk Scoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a credit analyst. I will paste customer payment history and credit notes. Score each customer as Low, Medium, or High risk. Present in a table: Customer, Risk Score, Reason for Score (1–2 sentences).”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">10) Scenario Modelling</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a corporate finance modeller. Based on the company’s current revenue and costs (I will paste data), model 3 scenarios: (1) Base Case, (2) Optimistic, (3) Downside. Present in a table with Scenario, Revenue Projection, Cost Projection, Net Impact. Add a 2-sentence summary of risks.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+    </div>
+  </div>
+</details>
+
+<!-- HUMAN RESOURCES -->
+<details class="category">
+  <summary>Human Resources – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+  <div class="category-content">
+    <div class="prompts-grid">
+      <div class="prompt-card"><div class="prompt-title">1) CV Screening</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a recruiter. I will paste a CV and a job description. Evaluate the candidate against the role. Structure your answer into: (1) Key Strengths, (2) Gaps, (3) Overall Fit scored out of 10 with a one-line justification. Keep the tone professional and concise.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">2) Employee Sentiment Tracking</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an HR analyst. I will paste a set of employee survey responses. Summarise the overall sentiment in 3 parts: (1) Positive Themes, (2) Negative Themes, (3) Suggested HR Actions. Keep it under 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">3) Learning Recommendations</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a learning and development advisor. I will paste an employee’s role, skills, and career goals. Suggest 5 training or development activities, each with a 1-sentence rationale. Present as a bullet list.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">4) Shift Scheduling</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a workforce planner. I will paste staff availability and workload requirements. Create a weekly rota that balances coverage and fairness. Present as a table: Day, Shift, Assigned Staff.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">5) Attrition Prediction</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an HR risk analyst. I will paste employee engagement and performance notes. Flag employees who may be at risk of leaving. Present in a table: Employee, Risk Level (High/Medium/Low), Reason for Risk, Suggested Retention Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">6) Internal Mobility Matching</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a talent mobility consultant. I will paste a list of open roles and a list of employee profiles. Suggest matches where employees could fill roles internally. Present as a table: Role, Suggested Employee, Match Reason.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">7) Pay Benchmarking</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a compensation analyst. I will paste job descriptions and current salaries. Compare them with benchmark data I provide. Present in a table: Role, Current Salary, Benchmark Range, Adjustment Recommendation.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">8) Diversity Monitoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a diversity analyst. I will paste hiring and promotion records. Summarise diversity representation in 3 parts: (1) Gender breakdown, (2) Ethnic background breakdown, (3) Any gaps compared to benchmarks. Add 2 recommendations for improvement.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">9) Interview Analysis</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an interview assessor. I will paste a transcript of an interview. Evaluate the candidate under 3 headings: (1) Communication, (2) Technical Knowledge, (3) Cultural Fit. Give each a score out of 5 and a 1–2 sentence justification.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">10) Workforce Planning</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a workforce strategist. I will paste company growth projections and staff data. Forecast workforce needs over the next 12 months. Present in a table: Role, Current Headcount, Projected Need, Gap. Add a short paragraph with recruitment priorities.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+    </div>
+  </div>
+</details>
+
+<!-- IT / SECURITY -->
+<details class="category">
+  <summary>IT / Security – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+  <div class="category-content">
+    <div class="prompts-grid">
+      <div class="prompt-card"><div class="prompt-title">1) Threat Detection</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a cybersecurity analyst. I will paste network log entries. Identify any suspicious patterns that may signal threats. Present in a table: Log ID, Suspicious Pattern, Risk Level (High/Medium/Low), Suggested Next Step. Keep explanations short.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">2) Automated Patching</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a systems administrator. I will paste a list of software versions. Identify which need urgent patching based on severity and common exploits. Present in a table: Application, Version, Patch Urgency (High/Medium/Low), Reason.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">3) Helpdesk Automation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an IT support assistant. I will paste a set of common user queries. Draft a ready-to-use response template for each. Keep each response under 80 words, clear and practical. Present as numbered items.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">4) System Monitoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an IT operations analyst. I will paste server performance logs. Summarise them in a table: Server ID, Status (Normal/Warning/Critical), Main Issue Detected, Suggested Action. Add a 2-sentence overview at the end.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">5) Incident Response Automation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an incident responder. I will paste a report of a security incident. Summarise into 4 sections: (1) Root Cause, (2) Containment Actions, (3) Resolution Steps, (4) Recommended Preventive Measures. Limit to 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">6) User Behaviour Analytics</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an information security officer. I will paste login activity data. Highlight unusual behaviour such as failed logins, odd hours, or strange locations. Present in a table: User, Anomaly, Risk Level, Suggested Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">7) Backup Optimisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a systems planner. I will paste details of system backups. Suggest improvements for frequency, storage use, and recovery time. Present as 3 bullet points with 1–2 sentence explanations each.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">8) Asset Discovery</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an IT auditor. I will paste network scan results. Identify unregistered or shadow IT assets. Present in a table: Asset, Risk Level (High/Medium/Low), Suggested Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">9) Code Review Assistance</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a code reviewer. I will paste a block of source code. Identify any vulnerabilities, inefficiencies, or unclear logic. Provide feedback in bullet points with 1–2 sentence explanations. Limit to 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">10) Capacity Planning</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an IT capacity planner. I will paste usage data for servers and applications. Forecast whether current resources will meet demand over the next 6 months. Present in a table: Resource, Current Usage %, Projected Usage %, Action Needed. Add a 2-sentence summary.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+    </div>
+  </div>
+</details>
+
+<!-- R&D / PRODUCT DEVELOPMENT -->
+<details class="category">
+  <summary>R&amp;D / Product Development – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+  <div class="category-content">
+    <div class="prompts-grid">
+      <div class="prompt-card"><div class="prompt-title">1) Idea Generation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an innovation analyst. I will paste market research notes. Suggest 5 new product or feature ideas inspired by the data. Present as a numbered list with Idea, Short Description, and Why It Could Work (1–2 sentences).”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">2) Product Testing Simulation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a product tester. I will paste product specifications. Suggest 3 simulated test scenarios (stress, usability, compliance). For each, describe the test conditions and what the results would reveal. Present in a table.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">3) Market Fit Analysis</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a product strategist. I will paste customer feedback. Summarise whether the product fits market needs. Structure into: (1) Customer Wants, (2) Where Product Meets Them, (3) Where It Falls Short, (4) Suggested Improvements. Limit to 250 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">4) Design Optimisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a product designer. I will paste a draft design description. Suggest 3 design improvements to enhance usability or efficiency. Present in a bullet list, with 2 sentences explaining each.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">5) Material Discovery</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a materials researcher. I will paste desired product properties (e.g., lightweight, heat resistant). Suggest 3 candidate materials and briefly explain why each is suitable. Present in a table: Material, Key Property, Use Case Fit.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">6) Feature Prioritisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a product manager. I will paste a list of requested features. Rank them by importance based on frequency and customer value. Present in a table: Feature, Frequency, Value, Priority (High/Medium/Low). Add a 2-sentence summary.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">7) Prototype Generation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a product developer. Based on the following idea [insert idea], draft a quick product concept description including: Target User, Key Features, How It Solves the Problem. Keep under 150 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">8) Risk Analysis</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a compliance analyst. I will paste details of a new product concept. Identify 3 possible risks (regulatory, technical, safety). For each, give a 1–2 sentence explanation and a suggested mitigation. Present as bullet points.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">9) Cost Modelling</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a cost analyst. I will paste details of a proposed design. Estimate potential cost drivers by category (materials, labour, logistics). Present as a table with Category, Cost Driver, Potential Impact (High/Medium/Low).”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">10) Competitive Benchmarking</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a competitive analyst. I will paste competitor product descriptions. Summarise them in a table: Competitor, Product, Key Features, Strengths, Weaknesses. End with a 2-sentence note on how we can differentiate.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+    </div>
+  </div>
+</details>
+
+<!-- EXECUTIVE / STRATEGY -->
+<details class="category">
+  <summary>Executive / Strategy – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+  <div class="category-content">
+    <div class="prompts-grid">
+      <div class="prompt-card"><div class="prompt-title">1) Market Trend Forecasting</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a strategy consultant. I will paste excerpts from an industry report. Summarise 5 emerging trends with a short explanation of their potential business impact. Present as a numbered list with Trend, Description, and Impact.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">2) Competitor Benchmarking</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a competitive intelligence analyst. I will paste competitor financial and product information. Summarise into a table: Competitor, Key Strengths, Weaknesses, Strategic Threat, Opportunity for Us. End with a 2-sentence summary of the competitive landscape.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">3) Strategic Scenario Planning</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a corporate strategist. Based on the business data I paste, create 3 strategic scenarios: (1) Base Case, (2) Growth Case, (3) Downside Case. Present each with Assumptions, Expected Outcome, and Key Risks. Keep total under 300 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">4) KPI Forecasting</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a business analyst. I will paste recent KPI data. Forecast likely values for the next 6 months. Present in a table: KPI, Current Value, Forecast Range, Key Drivers. Add a 2-sentence note on risks to performance.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">5) Risk Monitoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a risk advisor. I will paste external news summaries and company updates. Identify 3 risks that may affect the business. For each, include Type (Regulatory, Market, Operational), Potential Impact, and Suggested Mitigation. Present as bullet points.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">6) M&A Target Identification</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an investment analyst. I will paste company profiles. Identify which are good acquisition targets. Present in a table: Company, Strategic Fit (High/Medium/Low), Rationale (1–2 sentences), Potential Synergy.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">7) Pricing Strategy</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a pricing strategist. I will paste details of our product and market. Suggest 3 pricing strategies: Premium, Competitive, Discount. Present in a table: Strategy, Recommended Price Point, Pros, Cons.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">8) Investor Sentiment Analysis</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an investor relations advisor. I will paste excerpts from analyst reports and financial media. Summarise sentiment under 3 headings: (1) Positive Themes, (2) Negative Themes, (3) Neutral Observations. Add a 2-sentence recommendation for executive messaging.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">9) Talent Strategy</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a workforce strategist. I will paste business growth goals. Recommend 5 skill areas the company should invest in over the next 2 years. Present as a numbered list with Skill, Why It Matters, and Suggested Approach.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">10) Sustainability Modelling</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a sustainability consultant. I will paste company operations data. Suggest 3 initiatives to reduce carbon footprint. For each, provide Estimated Impact (High/Medium/Low), Cost Level, and One-Line Benefit. Present as a table.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+    </div>
+  </div>
+</details>
+
+<!-- LEGAL & COMPLIANCE -->
+<details class="category">
+  <summary>Legal &amp; Compliance – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+  <div class="category-content">
+    <div class="prompts-grid">
+      <div class="prompt-card"><div class="prompt-title">1) Contract Review and Clause Extraction</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a contract analyst. I will paste a contract excerpt. Extract key clauses under the headings: Parties, Obligations, Payment Terms, Termination, Risks. Summarise each in plain English, keeping total under 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">2) Compliance Monitoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a compliance officer. I will paste a list of recent company actions. Flag any that might conflict with [specific regulation, e.g., GDPR, SOX]. Present as a table: Action, Possible Breach, Risk Level (High/Medium/Low), Recommended Step.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">3) E-Discovery in Litigation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a litigation support assistant. I will paste a batch of documents. Identify which are most relevant to [case topic]. Present in a table: Document ID, Relevance (High/Medium/Low), Key Phrase Extracted. Limit explanations to 1 sentence.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">4) Intellectual Property Monitoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an IP analyst. I will paste text or product descriptions. Check for potential overlaps with existing patents or trademarks (based on known examples). Present in a table: Item, Possible Overlap, Risk Level, Next Step.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">5) Policy Enforcement Checks</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a compliance auditor. I will paste internal emails or documents. Flag where policy breaches may exist (e.g., data handling, insider trading). Present as bullet points: Extracted Phrase, Type of Breach, Recommended Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">6) Regulatory Reporting Automation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a regulatory reporting specialist. I will paste company data. Draft a summary suitable for submission to [specific regulator]. Structure it into: Required Metrics, Compliance Statement, Supporting Notes. Keep under 300 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">7) Third-Party Risk Scoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a compliance risk analyst. I will paste details of suppliers. Score each on compliance risk (Low/Medium/High). Present in a table: Supplier, Risk Score, Reason for Score (1–2 sentences), Suggested Mitigation.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">8) Anti-Money Laundering Detection</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an AML analyst. I will paste transaction data. Identify any that look like possible money laundering. Present in a table: Transaction ID, Red Flag, Risk Level, Suggested Next Step. Keep reasons short.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">9) Data Privacy Audits</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a data privacy consultant. I will paste system or data handling notes. Identify personal data types and potential GDPR/CCPA risks. Present as a table: Data Type, Risk Level, Recommended Mitigation.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">10) Litigation Outcome Prediction</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a legal strategist. I will paste case details. Based on precedent, outline 3 possible outcomes: Win, Settlement, Loss. For each, provide Probability (High/Medium/Low) and a 2-sentence rationale. Present in table format.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+    </div>
+  </div>
+</details>
+
+<!-- PROCUREMENT -->
+<details class="category">
+  <summary>Procurement – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+  <div class="category-content">
+    <div class="prompts-grid">
+      <div class="prompt-card"><div class="prompt-title">1) Supplier Selection Scoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a procurement analyst. I will paste profiles of potential suppliers. Score each out of 10 for suitability. Present in a table: Supplier, Strengths, Weaknesses, Score, 1-Line Rationale.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">2) Contract Negotiation Support</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a negotiation advisor. I will paste a draft supplier contract. Highlight 5 clauses where terms could be improved (e.g., pricing, liability, delivery). Present as bullet points with Suggested Amendment and Benefit of Change.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">3) Automated Purchase Order Validation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a procurement controller. I will paste recent purchase orders. Flag any errors, duplicates, or mismatches with standard terms. Present in a table: PO Number, Issue Found, Severity (High/Medium/Low), Recommended Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">4) Spend Analytics</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a procurement analyst. I will paste company spend data. Categorise spend into key buckets (e.g., IT, Travel, Marketing) and identify anomalies. Present as a table: Category, Total Spend, Notable Outlier, Suggested Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">5) Price Benchmarking</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a market analyst. I will paste supplier price quotes. Compare against industry benchmarks I provide. Present in a table: Item, Supplier Price, Benchmark Price, Difference %, Recommendation.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">6) Supplier Performance Monitoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a vendor manager. I will paste supplier delivery and quality reports. Summarise into a table: Supplier, On-Time Delivery %, Defect Rate %, Overall Performance Rating (High/Medium/Low). Add a 2-sentence summary.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">7) Risk Alerts on Vendor Stability</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a supply chain risk analyst. I will paste financial and news data about suppliers. Flag any showing signs of instability. Present in a table: Supplier, Warning Signal, Risk Level, Suggested Next Step.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">8) ESG Compliance Checks</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a sustainability officer. I will paste supplier information. Assess ESG risk. Present in a table: Supplier, ESG Issue Identified, Risk Level (High/Medium/Low), Suggested Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">9) Demand Aggregation Recommendations</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a procurement strategist. I will paste order data from different departments. Suggest opportunities to consolidate purchases for better volume discounts. Present in a table: Item, Departments Ordering, Combined Volume, Potential Benefit.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">10) Procurement Fraud Detection</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a fraud analyst. I will paste procurement transactions. Flag suspicious patterns (e.g., split invoices, duplicate payments). Present in a table: Transaction ID, Suspicious Pattern, Risk Level, Suggested Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+    </div>
+  </div>
+</details>
+
+<!-- FACILITIES / WORKPLACE MANAGEMENT -->
+<details class="category">
+  <summary>Facilities / Workplace Management – 10 Expert-Level Prompts <i class="fa-solid fa-angle-down" aria-hidden="true"></i></summary>
+  <div class="category-content">
+    <div class="prompts-grid">
+      <div class="prompt-card"><div class="prompt-title">1) Smart Energy Optimisation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an energy efficiency consultant. I will paste building energy usage data. Identify the 3 biggest sources of consumption and suggest 1 practical action for each to reduce it. Present in a table: Area, Current Usage, Suggested Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">2) Space Utilisation Analysis</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a workplace planner. I will paste data on meeting room and desk bookings. Summarise which spaces are underused or overused. Present in a table: Space, Utilisation %, Status (Under/Over/Optimal), Recommendation.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">3) Predictive Maintenance of Equipment</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a facilities maintenance planner. I will paste equipment logs. Flag items at risk of failure soon. Present in a table: Equipment, Warning Sign, Risk Level, Suggested Maintenance Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">4) Security Video Analytics</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a security analyst. I will paste observations from CCTV footage. Summarise incidents into a table: Incident Type, Frequency, Risk Level, Suggested Response. Add a 2-sentence overall summary.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">5) Cleaning and Service Scheduling</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a facilities coordinator. I will paste building usage data. Suggest an optimised cleaning schedule based on actual use, not fixed timings. Present as a table: Area, Usage Level, Suggested Cleaning Frequency.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">6) Smart Access Control</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a workplace security officer. I will paste access log data. Highlight unusual entry attempts. Present in a table: User/ID, Time, Anomaly Detected, Suggested Action.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">7) Emergency Response Planning</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a safety officer. I will paste details of our office layout. Draft a simple 10-step evacuation plan in plain English. Each step must start with a verb and be under 12 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">8) Visitor Management Automation</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a front desk manager. I will paste visitor logs. Summarise them into a table: Visitor Name, Host, Purpose, Entry Time, Exit Time. Add a 2-sentence note on any unusual patterns.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">9) Environmental Monitoring</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are a workplace health analyst. I will paste air quality and noise data. Summarise findings into a table: Metric, Value, Status (Good/Moderate/Poor), Recommended Action. Keep it clear for non-technical readers.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+      <div class="prompt-card"><div class="prompt-title">10) Workplace Experience Analytics</div><div class="prompt-body"><textarea class="prompt-text" readonly>“You are an HR-facilities analyst. I will paste employee feedback on workplace conditions. Summarise into 3 sections: (1) Positive Themes, (2) Negative Themes, (3) Suggested Improvements. Limit to 200 words.”</textarea></div><div class="prompt-actions"><button class="btn copy">Copy</button></div></div>
+    </div>
+  </div>
+</details>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 30 Day AI Flywheel. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleNav(btn){ const nav = document.getElementById('siteNav'); const isOpen = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', String(isOpen)); }
+    document.querySelectorAll('#navLinks a').forEach(link => { link.addEventListener('click', () => { const nav = document.getElementById('siteNav'); if (window.innerWidth <= 768 && nav.classList.contains('open')) { nav.classList.remove('open'); const btn = document.querySelector('.topnav .icon'); if (btn) btn.setAttribute('aria-expanded', 'false'); } }); });
+
+    // Copy buttons
+    function wireCopy(){
+      document.querySelectorAll('.prompt-card .copy').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const ta = btn.closest('.prompt-card').querySelector('.prompt-text');
+          ta.select(); ta.setSelectionRange(0, ta.value.length);
+          try { await navigator.clipboard.writeText(ta.value); btn.textContent = 'Copied'; setTimeout(()=>btn.textContent='Copy', 1200); }
+          catch(e){ document.execCommand('copy'); btn.textContent='Copied'; setTimeout(()=>btn.textContent='Copy', 1200); }
+        });
+      });
+    }
+    document.addEventListener('DOMContentLoaded', wireCopy);
+  </script>
+</body>
+</html>
