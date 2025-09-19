@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gyms and Fitness Studios – AI Playbook | 30 Day AI Flywheel</title>
+  <meta name="title" content="Gyms and Fitness Studios – AI Playbook | 30 Day AI Flywheel">
+  <meta name="description" content="A practical AI playbook for gyms and fitness studios. Clear growth drivers, proven AI use cases, data needs, ROI metrics, and a 30 day starter plan to grow memberships and retention.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://30dayaiflywheel.com/resources/playbook-gyms.html">
+  <meta property="og:title" content="Gyms and Fitness Studios – AI Playbook | 30 Day AI Flywheel">
+  <meta property="og:description" content="A practical AI playbook for gyms and fitness studios. Clear growth drivers, proven AI use cases, data needs, ROI metrics, and a 30 day starter plan to grow memberships and retention.">
+  <meta property="og:image" content="https://30dayaiflywheel.com/flywheel.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://30dayaiflywheel.com/resources/playbook-gyms.html">
+  <meta name="twitter:title" content="Gyms and Fitness Studios – AI Playbook | 30 Day AI Flywheel">
+  <meta name="twitter:description" content="A practical AI playbook for gyms and fitness studios. Clear growth drivers, proven AI use cases, data needs, ROI metrics, and a 30 day starter plan to grow memberships and retention.">
+  <meta name="twitter:image" content="https://30dayaiflywheel.com/flywheel.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Base */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background:#fff; color:#333; line-height:1.6; overflow-x:hidden; padding-top:20px; }
+    .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+    /* Top navigation (shared) */
+    .topnav {
+      background:#fff; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      border-radius:8px; display:flex; justify-content:space-between; align-items:center;
+      padding:0 20px; height:70px; margin-bottom:30px;
+    }
+    .logo-container { display:flex; align-items:center; }
+    .logo { width:50px; height:50px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-right:-10px; }
+    .logo img { width:50px; height:50px; display:block; border-radius:8px; }
+    .logo-text { font-size:1.2rem; font-weight:600; color:#2c3e50; }
+    .logo-text a { color:#2c3e50; text-decoration:none; }
+
+    .nav-links { display:flex; align-items:center; }
+    .topnav a {
+      color:#333; text-align:center; padding:12px 16px; text-decoration:none;
+      font-size:1rem; font-weight:500; border-radius:4px; margin:0 5px; transition:all .3s ease;
+    }
+    .topnav a:hover, .topnav a.active { background:#ff9900; color:#fff; }
+
+    .topnav .icon {
+      display:none; color:#2c3e50; font-size:1.5rem; cursor:pointer; padding:10px; background:transparent; border:0;
+    }
+
+    /* Headings */
+    header { text-align:center; padding:30px 0 20px; border-bottom:1px solid #f0f0f0; position:relative; }
+    h1 { font-size:2.5rem; margin-bottom:10px; color:#2c3e50; }
+    h2 { font-size:1.8rem; margin:25px 0 15px; color:#2c3e50; }
+    h3 { font-size:1.4rem; margin:18px 0 10px; color:#2c3e50; }
+    .subtitle { font-size:1.2rem; color:#7f8c8d; margin-bottom:0; }
+
+    /* Intro */
+    .intro { padding:30px 0; text-align:center; max-width:900px; margin:0 auto; }
+    .intro p { margin-bottom:12px; font-size:1.05rem; }
+
+    /* Content layout */
+    .grid-2 { display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; }
+    .grid-3 { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+    .card { border:1px solid #eaeaea; border-radius:8px; background:#fff; padding:18px; }
+    .card ul { margin-left:18px; }
+    .card li { margin:8px 0; }
+    .note { font-size:.95rem; color:#555; margin-top:6px; }
+
+    /* CTA */
+    .cta-section { text-align:center; padding:50px 20px; background:#f8f9fa; border-radius:8px; margin:40px 0; }
+    .cta-button {
+      display:inline-block; background:#ff9900; color:#fff; padding:14px 35px; font-size:1.1rem; font-weight:bold;
+      text-decoration:none; border-radius:4px; margin-top:16px; transition:all .3s; box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    }
+    .cta-button:hover { background:#e68a00; transform:translateY(-2px); }
+
+    /* Footer */
+    footer { text-align:center; padding:25px 0; color:#7f8c8d; font-size:.9rem; border-top:1px solid #f0f0f0; margin-top:30px; }
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .container { padding:0 15px; }
+      h1 { font-size:2.2rem; }
+      h2 { font-size:1.6rem; }
+      .grid-3 { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:768px){
+      .topnav { padding:0 15px; position:relative; }
+      .topnav .icon { display:block; }
+      .nav-links { display:none; width:100%; }
+      .topnav.open { flex-direction:column; height:auto; padding:15px; align-items:flex-start; }
+      .topnav.open .logo-container { width:100%; margin-bottom:15px; }
+      .topnav.open .nav-links { display:flex; flex-direction:column; width:100%; }
+      .topnav.open .nav-links a { display:block; width:100%; text-align:left; margin:5px 0; padding:10px; }
+      h1 { font-size:2rem; padding:0 20px; }
+      .subtitle { font-size:1.05rem; padding:0 20px; }
+      .grid-2, .grid-3 { grid-template-columns:1fr; }
+    }
+    @media (max-width:480px){
+      header { padding:25px 0 15px; }
+      h1 { font-size:1.8rem; }
+      h2 { font-size:1.5rem; margin:20px 0 12px; }
+      h3 { font-size:1.3rem; }
+      .logo-text { font-size:1rem; }
+      .topnav { height:60px; }
+      .logo, .logo img { width:40px; height:40px; }
+      .cta-button { width:100%; padding:14px 20px; }
+    }
+
+    /* Small helper styles */
+    .tag { display:inline-block; font-size:.85rem; padding:6px 10px; background:#f1f5f9; border-radius:16px; margin:4px 6px 0 0; color:#334155; }
+    .muted { color:#666; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.95rem; background:#f3f4f6; padding:2px 6px; border-radius:4px; border:1px solid #e5e7eb; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top navigation (shared) -->
+    <div class="topnav" id="siteNav">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="/" aria-label="Home"> 
+            <img src="/flywheel.png" width="50" height="50" alt="30 Day AI Flywheel logo"> 
+          </a>
+        </div>
+        <div class="logo-text"><a href="/">30 Day AI Flywheel</a></div> 
+      </div>
+
+      <button class="icon" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleNav(this)">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="/">Book</a>
+        <a href="/resources/">Resources</a>
+        <a href="../feedback.html">Feedback</a>
+      </div>
+    </div>
+
+    <!-- Page header -->
+    <header>
+      <h1>Gyms and Fitness Studios – AI Playbook</h1>
+      <p class="subtitle">Grow memberships, raise class fill, and keep members engaged</p>
+    </header>
+
+    <main>
+      <!-- Intro -->
+      <section class="intro">
+        <h2>What this page gives you</h2>
+        <p>This playbook shows where AI helps a gym or studio today. It focuses on member sign ups, class occupancy, and retention.</p>
+        <p class="muted">Use the 30 Day AI Flywheel: <span class="tag">Identify</span> <span class="tag">Cycle</span> <span class="tag">Measure</span> <span class="tag">Scale</span>.</p>
+      </section>
+
+      <!-- Growth Drivers + Use Cases -->
+      <section>
+        <div class="grid-2">
+          <div class="card">
+            <h2>Typical Growth Drivers</h2>
+            <ul>
+              <li>Increase new member sign ups.</li>
+              <li>Lift class occupancy and reduce late cancellations.</li>
+              <li>Improve member retention with simple coaching nudges.</li>
+              <li>Increase personal training and add on sales.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>AI Use Cases Already Working</h2>
+            <ul>
+              <li>AI assistant for tours, trials, pricing questions, and bookings.</li>
+              <li>Predictive churn alerts based on visit gaps and engagement.</li>
+              <li>Smart waitlists and auto fill for late class cancellations.</li>
+              <li>Personalised workout tips and habit nudges by SMS or app.</li>
+              <li>Lead scoring to focus sales on high intent enquiries.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Readiness + Metrics -->
+      <section style="margin-top:24px;">
+        <div class="grid-2">
+          <div class="card">
+            <h2>Data Readiness (What you need)</h2>
+            <ul>
+              <li>Member CRM with join date, plan, and contact details.</li>
+              <li>Check in history and class bookings with time stamps.</li>
+              <li>PT sessions, shop sales, and add on purchases.</li>
+              <li>Consent and opt in data for messaging.</li>
+            </ul>
+            <p class="note">CSV export is enough to start. Add integrations later if needed.</p>
+          </div>
+
+          <div class="card">
+            <h2>Metrics to Track ROI</h2>
+            <ul>
+              <li><strong>New member conversion rate</strong> from tours and trials.</li>
+              <li><strong>Class occupancy</strong> and late cancellation rate.</li>
+              <li><strong>Monthly churn</strong> and save rate after outreach.</li>
+              <li><strong>Average revenue per member</strong> including PT and add ons.</li>
+              <li><strong>Engagement</strong> visits per member per month.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 30 Day Focus -->
+      <section style="margin-top:24px;">
+        <h2>Example 30 Day Focus</h2>
+        <div class="grid-2">
+          <div class="card">
+            <ul>
+              <li><strong>Week 1:</strong> add an AI assistant on site and WhatsApp for tours, trials, and bookings. Turn on confirmations and reminders.</li>
+              <li><strong>Week 2:</strong> launch churn alerts for members who have not visited in 10 to 14 days and send a simple nudge with an easy class or PT intro.</li>
+              <li><strong>Week 3:</strong> enable smart waitlists to auto fill late cancellations and offer a small perk for last minute seats.</li>
+              <li><strong>Week 4:</strong> review class occupancy, churn, and new member conversion vs last month. Keep the best two changes.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>What “good” looks like</h3>
+            <ul>
+              <li>Class occupancy up by 5 to 10 points.</li>
+              <li>Late cancellations down by 15 to 30 percent.</li>
+              <li>Monthly churn down by 1 to 2 points.</li>
+              <li>PT attachments and add ons rising week by week.</li>
+            </ul>
+            <p class="note">Keep it simple. One change per week. Measure, then scale what works.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How To / Setup Help -->
+      <section style="margin-top:24px;">
+        <div class="grid-3">
+          <div class="card">
+            <h3>Set up in under an hour</h3>
+            <ul>
+              <li>Export last 6 to 12 months of member, check in, and class data.</li>
+              <li>Switch on confirmations, reminders, and waitlists in your system.</li>
+              <li>Add the assistant to your site and WhatsApp with clear CTAs.</li>
+            </ul>
+            <p class="note">If you use Mindbody, Glofox, TeamUp, or Virtuagym, start with built in features.</p>
+          </div>
+          <div class="card">
+            <h3>Fast wins to test</h3>
+            <ul>
+              <li>Trial to member offer within 24 hours of first visit.</li>
+              <li>Come back nudge at day 10 with one click booking.</li>
+              <li>Last minute class fill message to nearby members.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Guardrails</h3>
+            <ul>
+              <li>Get consent for messages and make opt out easy.</li>
+              <li>Keep health data private and avoid sensitive details in messages.</li>
+              <li>Do not spam. One useful message beats many generic ones.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section" id="contact">
+        <h2>Need support running your first 30 day development cycles?</h2>
+        <p>Book a 20 minute call. We can pick one or two actions from this playbook and I can help you to get them live.</p>
+        <a href="https://calendly.com/john-jemima/30min" class="cta-button">Book a Call</a>
+        <p style="margin-top:12px; font-style:italic;">No long contracts. Clear setup, fast feedback, real results.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 30 Day AI Flywheel. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu (shared)
+    function toggleNav(btn){
+      const nav = document.getElementById('siteNav');
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    // Close menu on link click (mobile)
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('siteNav');
+        if (window.innerWidth <= 768 && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          const btn = document.querySelector('.topnav .icon');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
