@@ -3,29 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Free AI Tools & Templates – 30 Day AI Flywheel Resources</title>
-<meta name="title" content="Free AI Tools & Templates – 30 Day AI Flywheel Resources">
-<meta name="description" content="Access free tools, templates and worksheets to help you apply the 30 Day AI Flywheel: plan projects, filter ideas, audit AI usage and track results.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://30dayaiflywheel.com/resources">
-<meta property="og:title" content="Free AI Tools & Templates – 30 Day AI Flywheel Resources">
-<meta property="og:description" content="Access free tools, templates and worksheets to help you apply the 30 Day AI Flywheel: plan projects, filter ideas, audit AI usage and track results.">
-<meta property="og:image" content="https://30dayaiflywheel.com/flywheel.png">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://30dayaiflywheel.com/resources">
-<meta name="twitter:title" content="Free AI Tools & Templates – 30 Day AI Flywheel Resources">
-<meta name="twitter:description" content="Access free tools, templates and worksheets to help you apply the 30 Day AI Flywheel: plan projects, filter ideas, audit AI usage and track results.">
-<meta name="twitter:image" content="https://30dayaiflywheel.com/flywheel.png">
-
-<!-- Favicon Icons -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <title>Free Resources - 30 Day AI Flywheel</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* Base + type */
@@ -50,10 +28,8 @@
       color:#333; text-align:center; padding:12px 16px; text-decoration:none;
       font-size:1rem; font-weight:500; border-radius:4px; margin:0 5px; transition:all .3s ease;
     }
-    /* Uncomment if you want hover/active background highlight */
     .topnav a:hover, .topnav a.active { background:#ff9900; color:#fff; }
 
-    /* Hamburger button (outside .nav-links) */
     .topnav .icon {
       display:none; color:#2c3e50; font-size:1.5rem; cursor:pointer; padding:10px; background:transparent; border:0;
     }
@@ -76,8 +52,15 @@
       transition:transform .3s ease, box-shadow .3s ease; background:#fff; display:flex; flex-direction:column;
     }
     .resource-card:hover { transform:translateY(-3px); box-shadow:0 5px 15px rgba(0,0,0,0.1); }
-    .resource-icon { font-size:2rem; color:#ff9900; margin-bottom:15px; text-align:center; }
-    .resource-title { font-size:1.1rem; color:#2c3e50; font-weight:600; margin-bottom:10px; }
+
+    .resource-icon img {
+      width:100%;
+      height:auto;
+      border-radius:4px;
+      display:block;
+    }
+
+    .resource-title { font-size:1.1rem; color:#2c3e50; font-weight:600; margin-top:15px; margin-bottom:10px; }
 
     /* Form section */
     .form-section { background:#f8f9fa; padding:50px 20px; border-radius:8px; margin:50px 0; text-align:center; }
@@ -109,16 +92,16 @@
       border-radius: 4px;
       text-align: center;
     }
-    
+
     .form-message.success {
       background-color: #d4edda;
-      color: #155724;
+      color:#155724;
       border: 1px solid #c3e6cb;
     }
-    
+
     .form-message.error {
       background-color: #f8d7da;
-      color: #721c24;
+      color:#721c24;
       border: 1px solid #f5c6cb;
     }
 
@@ -135,9 +118,7 @@
     @media (max-width:768px){
       .topnav { padding:0 15px; position:relative; }
       .topnav .icon { display:block; }
-      /* Hide menu by default on mobile */
       .nav-links { display:none; width:100%; }
-      /* Show when open */
       .topnav.open { flex-direction:column; height:auto; padding:15px; align-items:flex-start; }
       .topnav.open .logo-container { width:100%; margin-bottom:15px; }
       .topnav.open .nav-links { display:flex; flex-direction:column; width:100%; }
@@ -162,34 +143,31 @@
       .topnav { height:60px; }
       .logo, .logo img { width:40px; height:40px; }
     }
+
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Top navigation (same structure/IDs as other pages) -->
+    <!-- Top navigation -->
     <div class="topnav" id="siteNav">
       <div class="logo-container">
         <div class="logo">
-          <a href="../" aria-label="Home">
-            <img src="../flywheel.png" width="50" height="50" alt="30 Day AI Flywheel logo">
+          <a href="/index.html" aria-label="Home">
+            <img src="/flywheel.png" width="50" height="50" alt="30 Day AI Flywheel logo">
           </a>
         </div>
-        <div class="logo-text"><a href="../">30 Day AI Flywheel</a></div>
+        <div class="logo-text"><a href="/index.html">30 Day AI Flywheel</a></div>
       </div>
-
-      <!-- Hamburger button OUTSIDE .nav-links -->
       <button class="icon" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleNav(this)">
         <i class="fas fa-bars"></i>
       </button>
-
       <div class="nav-links" id="navLinks">
-        <a href="../">Book</a>
-        <a href="../consultancy.html">Consultancy</a>
-        <a href="../feedback.html">Feedback</a>
+        <a href="/">Book</a>
+        <a href="consultancy.html">Consultancy</a>
+        <a href="feedback.html">Feedback</a>
       </div>
     </div>
 
-    <!-- Page header -->
     <header>
       <h1>Free Resources</h1>
       <p class="subtitle">Support materials for 30 Day AI Flywheel readers</p>
@@ -204,101 +182,307 @@
       <section>
         <h2>Available Resources</h2>
         <div class="resources-grid">
+
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-chart-line"></i></div>
-            <h3 class="resource-title">Competitor AI Velocity Audit</h3>
-            <p>Track and compare how fast your competitors are adopting and scaling AI.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/30-day-ai-flywheel-diagram.html">
+                <img src="https://30dayaiflywheel.com/resources/images/day1-week1-month1-cycle-preview.png" alt="30 Day AI Flywheel Diagram Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">30 Day AI Flywheel Diagram</h3>
+            <p>Visual map of the flywheel at Day 1, Week 1, Month 1 — shows how momentum in AI builds over time using the flywheel framework.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-chart-pie"></i></div>
-            <h3 class="resource-title">Compounding ROI from AI</h3>
-            <p>Understand how AI projects stack to deliver compounding returns over time.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/ai-cycle-pitch-sheet-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/ai-cycle-pitch-sheet-preview.png" alt="AI Cycle Pitch Sheet Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">AI Cycle Pitch Sheet Template</h3>
+            <p>A ready-to-use sheet to help you frame and present an AI project clearly to decision-makers with impact, roadmap, and risks.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-cogs"></i></div>
-            <h3 class="resource-title">Flywheel Acceleration Curve</h3>
-            <p>Visualise how momentum builds when AI adoption follows the flywheel model.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/ai-cycle-planner-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/ai-cycle-planner-preview.png" alt="AI Cycle Planner Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">AI Cycle Planner Template</h3>
+            <p>Worksheet that guides you through planning your AI cycles: setting objectives, resources, deadlines & review points to iterate fast.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-search"></i></div>
-            <h3 class="resource-title">Market Audit</h3>
-            <p>Assess how AI is changing your market and where opportunities or risks are emerging.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/ai-governance-check-list-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/governance-guardrails-preview.png" alt="AI Governance Checklist Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">AI Governance Checklist Template</h3>
+            <p>Template to make sure you’ve got guardrails for AI: compliance, ethical use, roles & responsibilities, oversight.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-balance-scale"></i></div>
-            <h3 class="resource-title">Triangle of Resources</h3>
-            <p>Map the balance of data, people, and tools needed for AI success.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/ai-portfolio-tracker-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/ai-portfolio-tracker-preview.png" alt="AI Portfolio Tracker Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">AI Portfolio Tracker Template</h3>
+            <p>Tool to track all your AI projects in one place — progress, ROI, risk, dependencies — so you know what to scale or kill.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-calendar-alt"></i></div>
-            <h3 class="resource-title">30 Day Flywheel</h3>
-            <p>Plan your first 30-day AI project using the core flywheel framework.</p>
-          </div>
-
-          <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-project-diagram"></i></div>
-            <h3 class="resource-title">Flywheel vs Linear Plan</h3>
-            <p>See why a flywheel approach creates momentum while linear plans stall.</p>
-          </div>
-
-          <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-file-alt"></i></div>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/annotated-example-cycle.html">
+                <img src="https://30dayaiflywheel.com/resources/images/annotated-example-cycle-preview.png" alt="Annotated Example Cycle Preview">
+              </a>
+            </div>
             <h3 class="resource-title">Annotated Example Cycle</h3>
-            <p>Study a worked example of an AI cycle to understand how it fits together.</p>
+            <p>A worked example of an AI project cycle, with notes to show how all the pieces (data, people, tools) fit together in practice.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-tasks"></i></div>
-            <h3 class="resource-title">AI Cycle Planner</h3>
-            <p>Plan your own AI cycles with a guided worksheet.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/build-vs-buy-decision-tree-diagram.html">
+                <img src="https://30dayaiflywheel.com/resources/images/build-vs-buy-decision-tree-preview.png" alt="Build vs Buy Decision Tree Diagram Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Build vs Buy Decision Tree Diagram</h3>
+            <p>Helps you decide whether to build AI solutions in-house or buy them: weighs cost, speed, capability, control.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-clipboard-check"></i></div>
-            <h3 class="resource-title">Quick Performance Audit</h3>
-            <p>Check how current AI use is performing and where gaps remain.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/competitor-ai-velocity-audit-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/competitor-ai-velocity-audit-template.png" alt="Competitor AI Velocity Audit Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Competitor AI Velocity Audit Template</h3>
+            <p>Worksheet to measure how quickly your competitors are adopting and scaling AI, so you can spot gaps or threats.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-database"></i></div>
-            <h3 class="resource-title">Data Readiness Check</h3>
-            <p>Evaluate whether your data is prepared for effective AI projects.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/compounding-roi-from-ai-adoption-over-time-chart.html">
+                <img src="https://30dayaiflywheel.com/resources/images/early-vs-late-roi-preview.png" alt="Compounding ROI from AI Chart Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Compounding ROI from AI Adoption Over Time Chart</h3>
+            <p>Graph/chart that shows how benefits from AI projects add up (not linearly) over time — earlier wins multiply.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-filter"></i></div>
-            <h3 class="resource-title">Fast Filtering Matrix</h3>
-            <p>Filter AI ideas quickly based on impact, speed, and effort.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/cycle-funnel-diagram.html">
+                <img src="https://30dayaiflywheel.com/resources/images/cycle-funnel-preview.png" alt="Cycle Funnel Diagram Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Cycle Funnel Diagram</h3>
+            <p>Visual tool to filter AI ideas: start broad, apply criteria, narrow down to those worth doing now vs later.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-link"></i></div>
-            <h3 class="resource-title">Value Chain with Hotspots</h3>
-            <p>Spot where AI can add value across your full business chain.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/cycle-scorecard-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/cycle-scorecard-preview.png" alt="Cycle Scorecard Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Cycle Scorecard Template</h3>
+            <p>Scorecard you can use to evaluate each AI project / idea vs criteria like impact, speed, cost, risk before you run it.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-chalkboard"></i></div>
-            <h3 class="resource-title">AI Cycle Pitch Sheet</h3>
-            <p>Frame and pitch an AI project clearly to decision-makers.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/data-readiness-check-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/data-readiness-check-preview.png" alt="Data Readiness Check Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Data Readiness Check Template</h3>
+            <p>Checklist to make sure your data is clean, consistent, accessible & well structured before launching an AI project.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-sitemap"></i></div>
-            <h3 class="resource-title">Build or Buy Decision Tree</h3>
-            <p>Decide whether to build AI in-house or buy external solutions.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/fast-filtering-matrix-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/fast-filtering-matrix-preview.png" alt="Fast Filtering Matrix Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Fast Filtering Matrix Template</h3>
+            <p>Matrix to quickly sort ideas based on impact, effort & speed — helps you pick high-return tasks without analysis paralysis.</p>
           </div>
 
           <div class="resource-card">
-            <div class="resource-icon"><i class="fas fa-star"></i></div>
-            <h3 class="resource-title">Vendor Evaluation Matrix</h3>
-            <p>Score and compare AI vendors to select the right partner.</p>
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/flywheel-acceleration-curve-chart.html">
+                <img src="https://30dayaiflywheel.com/resources/images/flywheel-acceleration-curve-preview.png" alt="Flywheel Acceleration Curve Chart Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Flywheel Acceleration Curve Chart</h3>
+            <p>Curve showing flywheel momentum accelerates as you invest in people, data, tools over time.</p>
           </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/flywheel-vs-linear-plan-diagram.html">
+                <img src="https://30dayaiflywheel.com/resources/images/flywheel-vs-linear-preview.png" alt="Flywheel vs Linear Plan Diagram Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Flywheel vs Linear Plan Diagram</h3>
+            <p>Compares standard linear planning vs flywheel style: shows why flywheel maintains momentum while linear often stalls.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/future-proofing-check-list-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/future-proofing-checklist-preview.png" alt="Future Proofing Checklist Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Future Proofing Checklist Template</h3>
+            <p>Template to assess if your AI strategy can keep working as data, algorithms, regulations, tooling evolve.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/iteration-log-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/iteration-log-preview.png" alt="Iteration Log Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Iteration Log Template</h3>
+            <p>Log you fill out each cycle: what worked, what didn’t, improvements — helps you improve in next cycle.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/market-audit-worksheet-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/market-audit-worksheet-preview.png" alt="Market Audit Worksheet Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Market Audit Worksheet Template</h3>
+            <p>Helps you explore how AI is changing your market: opportunities, trends, threats, competitive moves.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/org-chart-overlay-with-hotspots-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/org-chart-ai-overlay-preview.png" alt="Org Chart Overlay with AI Hotspots Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Org Chart Overlay with Hotspots Template</h3>
+            <p>Overlay to map your organisational structure & where AI can add value (hotspots), responsibilities, gaps.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/quick-performance-audit-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/quick-performance-audit-preview.png" alt="Quick Performance Audit Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Quick Performance Audit Template</h3>
+            <p>Fast check-up of how well your current AI tools/processes are working; where there are gaps or wasted effort.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/roi-cycle-diagram.html">
+                <img src="https://30dayaiflywheel.com/resources/images/roi-cycle-preview.png" alt="ROI Cycle Diagram Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">ROI Cycle Diagram</h3>
+            <p>Shows the cycle of investment, outcome, reinvestment in AI: how returns feed back into more capability building.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/roi-tracker-sheet-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/roi-tracker-preview.png" alt="ROI Tracker Sheet Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">ROI Tracker Sheet Template</h3>
+            <p>Spreadsheet-style tracker so you can log returns over time from several AI projects and compare.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/rollout-roadmap-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/rollout-roadmap-preview.png" alt="Rollout Roadmap Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Rollout Roadmap Template</h3>
+            <p>Planning tool: when and how to roll out projects, scaling, stakeholders, dependencies over time.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/scale-curve-cycle-to-rollout-chart.html">
+                <img src="https://30dayaiflywheel.com/resources/images/scale-curve-preview.png" alt="Scale Curve Cycle to Rollout Chart Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Scale Curve Cycle to Rollout Chart</h3>
+            <p>Chart that shows how scale builds from cycles, then moves to broader rollout: visualising growth path.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/team-adoption-check-list-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/team-adoption-checklist-preview.png" alt="Team Adoption Checklist Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Team Adoption Checklist Template</h3>
+            <p>Checklist for managing adoption in teams: buy-in, training, feedback loops, culture change.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/toolkit-map-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/toolkit-map-preview.png" alt="Toolkit Map Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Toolkit Map Template</h3>
+            <p>Map of tools, data, people needed for AI adoption: where they sit, who owns them, what gaps exist.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/training-playbook-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/training-playbooks-preview.png" alt="Training Playbook Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Training Playbook Template</h3>
+            <p>Guide with processes, training materials, roles & responsibilities to train team members in AI.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/triangle-of-resources-diagram.html">
+                <img src="https://30dayaiflywheel.com/resources/images/triangle-of-resources-preview.png" alt="Triangle of Resources Diagram Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Triangle of Resources Diagram</h3>
+            <p>Diagram to map the balance between tools, data, people — ensures you don’t focus too heavily on one and neglect others.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/value-chain-with-ai-hotspots-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/value-chain-hotspots-preview.png" alt="Value Chain with AI Hotspots Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Value Chain with AI Hotspots Template</h3>
+            <p>Shows where in your business value chain AI could deliver the most value: operations, customer service, product, etc.</p>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <a href="https://30dayaiflywheel.com/resources/vendor-evaluation-scorecard-template.html">
+                <img src="https://30dayaiflywheel.com/resources/images/vendor-evaluation-scorecard-preview.png" alt="Vendor Evaluation Scorecard Template Preview">
+              </a>
+            </div>
+            <h3 class="resource-title">Vendor Evaluation Scorecard Template</h3>
+            <p>Scorecard to compare external vendors: cost, capability, reliability, support, future roadmap.</p>
+          </div>
+
         </div>
       </section>
 
@@ -309,24 +493,20 @@
             <p>Enter your email below to access all of these resources. You will also receive updates when new tools are added and examples of how other businesses are applying the 30 Day AI Flywheel.</p>
           </div>
 
-          <!-- Formspark Form -->
           <form class="email-form" id="resourceForm" action="https://submit-form.com/cerATqdTB" method="POST">
-            <!-- Form submission messages -->
             <div class="form-message success" id="successMessage">
               Thank you! We've sent the resources to your email. Check your inbox.
             </div>
             <div class="form-message error" id="errorMessage">
               Sorry, there was an error submitting your form. Please try again.
             </div>
-            
-            <!-- Formspark configuration -->
+
             <input type="hidden" name="_subject" value="New Resource Request - 30 Day AI Flywheel">
-            <input type="hidden" name="_redirect" value="https://30dayaiflywheel.com/resources/?submission=success">
-            <input type="hidden" name="_error_redirect" value="https://30dayaiflywheel.com/resources/?submission=error">
-            
-            <!-- Honeypot spam protection -->
+            <input type="hidden" name="_redirect" value="https://30dayaiflywheel.com/resources.html?submission=success">
+            <input type="hidden" name="_error_redirect" value="https://30dayaiflywheel.com/resources.html?submission=error">
+
             <input type="checkbox" name="_honeypot" style="display: none !important;" tabindex="-1" autocomplete="off">
-            
+
             <div class="form-group">
               <label for="email">Email Address</label>
               <input type="email" id="email" name="email" required placeholder="Your email address">
@@ -337,22 +517,22 @@
           <p class="privacy-note">No spam. Just practical tools to help you move faster with AI.</p>
         </div>
       </section>
+
     </main>
 
     <footer>
       <p>&copy; 2025 30 Day AI Flywheel. All rights reserved.</p>
     </footer>
+
   </div>
 
   <script>
-    // Mobile menu (same as other pages)
     function toggleNav(btn){
       const nav = document.getElementById('siteNav');
       const isOpen = nav.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(isOpen));
     }
 
-    // Close menu on link click (mobile)
     document.querySelectorAll('#navLinks a').forEach(link => {
       link.addEventListener('click', () => {
         const nav = document.getElementById('siteNav');
@@ -364,30 +544,24 @@
       });
     });
 
-    // Check URL for submission status
     const urlParams = new URLSearchParams(window.location.search);
     const submissionStatus = urlParams.get('submission');
-    
+
     if (submissionStatus === 'success') {
       showMessage('Thank you! We will send the resources to your email in the next 24 hours.', 'success');
-      // Clear the form
       document.getElementById('resourceForm').reset();
     } else if (submissionStatus === 'error') {
       showMessage('Sorry, there was an error submitting your form. Please try again.', 'error');
     }
-    
+
     function showMessage(text, type) {
       const messageDiv = document.getElementById(type === 'success' ? 'successMessage' : 'errorMessage');
       messageDiv.textContent = text;
       messageDiv.style.display = 'block';
-      
-      // Scroll to message
       messageDiv.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Form submission handling
     document.getElementById('resourceForm').addEventListener('submit', function(e) {
-      // Just show a loading state, don't prevent default submission
       const submitBtn = document.getElementById('submitButton');
       submitBtn.textContent = 'Sending...';
       submitBtn.disabled = true;
