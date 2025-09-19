@@ -78,8 +78,8 @@
     .features li:before { content:"✓"; color:#27ae60; position:absolute; left:0; font-weight:bold; }
 
     .cta-button {
-      display:inline-block; background:#ff9900; color:#fff; padding:4px 4px; font-size:1.0rem; font-weight:bold;
-      text-decoration:none; border-radius:4px; margin-top:8px; margin-right:4px; transition:background-color .3s; /* Reduced margin for mobile */
+      display:inline-block; background:#ff9900; color:#fff; padding:16px 40px; font-size:1.2rem; font-weight:bold;
+      text-decoration:none; border-radius:4px; margin-top:15px; transition:background-color .3s; /* Reduced margin for mobile */
       box-shadow:0 4px 6px rgba(0,0,0,0.1);
     }
     .cta-button:hover { background:#e68a00; }
@@ -164,8 +164,8 @@
       .topnav { height:60px; }
       .logo, .logo img { width:40px; height:40px; }
       .cta-button {
-        padding: 4px 4px;
-        font-size: 1.0rem;
+        padding: 14px 30px;
+        font-size: 1.1rem;
       }
       
       /* Further reduce book image size on very small screens */
@@ -206,7 +206,7 @@
 
       <div class="nav-links" id="navLinks">
         <a href="consultancy.html">Consultancy</a>
-        <a href="/resources">Resources</a>
+        <a href="/resources/">Resources</a>
         <a href="feedback.html">Feedback</a>
       </div>
     </div>
@@ -218,60 +218,33 @@
 
     <!-- Main content -->
     <main>
-<div class="book-content">
-  <div class="book-cover">
-    <img src="30dayaiflywheel.png" alt="30 Day AI Flywheel Book Cover" class="book-image">
+      <div class="book-content">
+        <div class="book-cover">
+          <img src="30dayaiflywheel.png" alt="30 Day AI Flywheel Book Cover" class="book-image">
+          
+          <!-- Mobile buy button (visible only on mobile) -->
+          <div class="mobile-buy-button">
+            <a href="https://www.amazon.com/dp/your-book-id" class="cta-button" target="_blank" rel="noopener">Buy on Amazon</a>
+          </div>
+        </div>
 
-    <!-- Mobile buy buttons (visible only on mobile) -->
-    <div class="mobile-buy-button">
-      <p><strong>Buy on Amazon:</strong></p>
-      <a href="https://www.amazon.com/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">US</a>
-      <a href="https://www.amazon.co.uk/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">UK</a>
-      <a href="https://www.amazon.de/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">DE</a>
-      <a href="https://www.amazon.fr/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">FR</a>
-      <a href="https://www.amazon.es/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">ES</a>
-      <a href="https://www.amazon.it/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">IT</a></br>
-      <a href="https://www.amazon.nl/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">NL</a>
-      <a href="https://www.amazon.pl/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">PL</a>
-      <a href="https://www.amazon.se/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">SE</a>
-      <a href="https://www.amazon.co.jp/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">JP</a>
-      <a href="https://www.amazon.ca/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">CA</a>
-      <a href="https://www.amazon.com.au/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">AU</a>
-    </div>
-  </div>
+        <div class="book-details">
+          <h2>Real Business Results in 30 Days</h2>
+          <p>This book shows you how to adopt AI quickly, safely, and profitably. Learn how to add AI into daily workflows, boost productivity, and gain a competitive edge.</p>
 
-  <div class="book-details">
-    <h2>Real Business Results in 30 Days</h2>
-    <p>This book shows you how to adopt AI quickly, safely, and profitably. Learn how to add AI into daily workflows, boost productivity, and gain a competitive edge.</p>
+          <ul class="features">
+            <li>A clear roadmap to put AI into action in 30 days</li>
+            <li>Tools and workflows you can use immediately</li>
+            <li>Real world case studies and examples</li>
+            <li>Strategies to avoid wasted spend and stalled pilots</li>
+            <li>A framework to track progress and prove ROI</li>
+          </ul>
 
-    <ul class="features">
-      <li>A clear roadmap to put AI into action in 30 days</li>
-      <li>Tools and workflows you can use immediately</li>
-      <li>Real world case studies and examples</li>
-      <li>Strategies to avoid wasted spend and stalled pilots</li>
-      <li>A framework to track progress and prove ROI</li>
-    </ul>
-
-    <p>Now available on Amazon in paperback.</p>
-    
-    <!-- Desktop buy buttons (hidden on mobile) -->
-    <div class="desktop-buy-buttons">
-      <p><strong>Buy on Amazon:</strong></p>
-      <a href="https://www.amazon.com/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">US</a>
-      <a href="https://www.amazon.co.uk/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">UK</a>
-      <a href="https://www.amazon.de/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">DE</a>
-      <a href="https://www.amazon.fr/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">FR</a>
-      <a href="https://www.amazon.es/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">ES</a>
-      <a href="https://www.amazon.it/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">IT</a>
-      <a href="https://www.amazon.nl/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">NL</a>
-      <a href="https://www.amazon.pl/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">PL</a>
-      <a href="https://www.amazon.se/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">SE</a>
-      <a href="https://www.amazon.co.jp/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">JP</a>
-      <a href="https://www.amazon.ca/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">CA</a>
-      <a href="https://www.amazon.com.au/dp/B0FQW4NHQG" class="cta-button" target="_blank" rel="noopener">AU</a>
-    </div>
-  </div>
-</div>
+          <p>Now available on Amazon in paperback.</p>
+          <!-- Desktop buy button (hidden on mobile) -->
+          <a href="https://www.amazon.com/dp/your-book-id" class="cta-button" target="_blank" rel="noopener">Buy on Amazon</a>
+        </div>
+      </div>
 
       <div class="testimonials">
         <div class="testimonial">
