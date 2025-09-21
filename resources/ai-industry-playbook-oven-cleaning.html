@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oven Cleaning AI Playbook | 30 Day AI Flywheel</title>
+  <meta name="title" content="Oven Cleaning AI Playbook | 30 Day AI Flywheel">
+  <meta name="description" content="A practical AI playbook for oven cleaning businesses. Growth drivers, proven AI use cases, data needs, ROI metrics, and a 30 day starter plan to lift bookings, raise average order value, and reduce no shows.">
+
+  <link rel="canonical" href="https://30dayaiflywheel.com/resources/ai-industry-playbook-oven-cleaning.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://30dayaiflywheel.com/resources/ai-industry-playbook-oven-cleaning.html">
+  <meta property="og:title" content="Oven Cleaning AI Playbook | 30 Day AI Flywheel">
+  <meta property="og:description" content="An AI playbook to fill the diary improve upsells and cut admin for oven cleaning teams.">
+  <meta property="og:image" content="https://30dayaiflywheel.com/flywheel.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://30dayaiflywheel.com/resources/ai-industry-playbook-oven-cleaning.html">
+  <meta name="twitter:title" content="Oven Cleaning AI Playbook | 30 Day AI Flywheel">
+  <meta name="twitter:description" content="An AI playbook to fill the diary improve upsells and cut admin for oven cleaning teams.">
+  <meta name="twitter:image" content="https://30dayaiflywheel.com/flywheel.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Base */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background:#fff; color:#333; line-height:1.6; overflow-x:hidden; padding-top:20px; }
+    .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+    /* Top navigation */
+    .topnav {
+      background:#fff; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      border-radius:8px; display:flex; justify-content:space-between; align-items:center;
+      padding:0 20px; height:70px; margin-bottom:30px;
+    }
+    .logo-container { display:flex; align-items:center; }
+    .logo { width:50px; height:50px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-right:-10px; }
+    .logo img { width:50px; height:50px; display:block; border-radius:8px; }
+    .logo-text { font-size:1.2rem; font-weight:600; color:#2c3e50; }
+    .logo-text a { color:#2c3e50; text-decoration:none; }
+
+    .nav-links { display:flex; align-items:center; }
+    .topnav a {
+      color:#333; text-align:center; padding:12px 16px; text-decoration:none;
+      font-size:1rem; font-weight:500; border-radius:4px; margin:0 5px; transition:all .3s ease;
+    }
+    .topnav a:hover, .topnav a.active { background:#ff9900; color:#fff; }
+
+    .topnav .icon {
+      display:none; color:#2c3e50; font-size:1.5rem; cursor:pointer; padding:10px; background:transparent; border:0;
+    }
+
+    /* Headings */
+    header { text-align:center; padding:30px 0 20px; border-bottom:1px solid #f0f0f0; position:relative; }
+    h1 { font-size:2.5rem; margin-bottom:10px; color:#2c3e50; }
+    h2 { font-size:1.8rem; margin:25px 0 15px; color:#2c3e50; }
+    h3 { font-size:1.4rem; margin:18px 0 10px; color:#2c3e50; }
+    .subtitle { font-size:1.2rem; color:#7f8c8d; margin-bottom:0; }
+
+    /* Layout helpers */
+    .intro { padding:30px 0; text-align:center; max-width:900px; margin:0 auto; }
+    .intro p { margin-bottom:12px; font-size:1.05rem; }
+    .grid-2 { display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; }
+    .grid-3 { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+    .card { border:1px solid #eaeaea; border-radius:8px; background:#fff; padding:18px; }
+    .card ul { margin-left:18px; }
+    .card li { margin:8px 0; }
+    .note { font-size:.95rem; color:#555; margin-top:6px; }
+
+    /* CTA */
+    .cta-section { text-align:center; padding:50px 20px; background:#f8f9fa; border-radius:8px; margin:40px 0; }
+    .cta-button {
+      display:inline-block; background:#ff9900; color:#fff; padding:14px 35px; font-size:1.1rem; font-weight:bold;
+      text-decoration:none; border-radius:4px; margin-top:16px; transition:all .3s; box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    }
+    .cta-button:hover { background:#e68a00; transform:translateY(-2px); }
+
+    /* Footer */
+    footer { text-align:center; padding:25px 0; color:#7f8c8d; font-size:.9rem; border-top:1px solid #f0f0f0; margin-top:30px; }
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .container { padding:0 15px; }
+      h1 { font-size:2.2rem; }
+      h2 { font-size:1.6rem; }
+      .grid-3 { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:768px){
+      .topnav { padding:0 15px; position:relative; }
+      .topnav .icon { display:block; }
+      .nav-links { display:none; width:100%; }
+      .topnav.open { flex-direction:column; height:auto; padding:15px; align-items:flex-start; }
+      .topnav.open .logo-container { width:100%; margin-bottom:15px; }
+      .topnav.open .nav-links { display:flex; flex-direction:column; width:100%; }
+      .topnav.open .nav-links a { display:block; width:100%; text-align:left; margin:5px 0; padding:10px; }
+      h1 { font-size:2rem; padding:0 20px; }
+      .subtitle { font-size:1.05rem; padding:0 20px; }
+      .grid-2, .grid-3 { grid-template-columns:1fr; }
+    }
+    @media (max-width:480px){
+      header { padding:25px 0 15px; }
+      h1 { font-size:1.8rem; }
+      h2 { font-size:1.5rem; margin:20px 0 12px; }
+      h3 { font-size:1.3rem; }
+      .logo-text { font-size:1rem; }
+      .topnav { height:60px; }
+      .cta-button { width:100%; padding:14px 20px; }
+    }
+
+    /* Small helpers */
+    .tag { display:inline-block; font-size:.85rem; padding:6px 10px; background:#f1f5f9; border-radius:16px; margin:4px 6px 0 0; color:#334155; }
+    .muted { color:#666; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top navigation -->
+    <div class="topnav" id="siteNav">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="/" aria-label="Home">
+            <img src="https://30dayaiflywheel.com/flywheel.png" width="50" height="50" alt="30 Day AI Flywheel logo">
+          </a>
+        </div>
+        <div class="logo-text"><a href="/">30 Day AI Flywheel</a></div>
+      </div>
+
+      <button class="icon" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleNav(this)">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="/">Book</a>
+        <a href="https://30dayaiflywheel.com/resources/">Resources</a>
+        <a href="https://30dayaiflywheel.com/feedback.html">Feedback</a>
+      </div>
+    </div>
+
+    <!-- Page header -->
+    <header>
+      <h1>Oven Cleaning AI Playbook</h1>
+      <p class="subtitle">Fill the diary raise average order value and reduce no shows</p>
+    </header>
+
+    <main>
+      <!-- Intro -->
+      <section class="intro">
+        <h2>What this page gives you</h2>
+        <p>This playbook shows where AI helps an oven cleaning business today. It focuses on steady bookings quick quotes smart add ons and faster answers that cut phone time while improving repeat rate and reviews.</p>
+        <p class="muted">Use the 30 Day AI Flywheel: <span class="tag">Identify</span> <span class="tag">Cycle</span> <span class="tag">Measure</span> <span class="tag">Scale</span>.</p>
+      </section>
+
+      <!-- Growth Drivers + Use Cases -->
+      <section>
+        <div class="grid-2">
+          <div class="card">
+            <h2>Typical Growth Drivers</h2>
+            <ul>
+              <li>Increase bookings for single oven double oven range and aga.</li>
+              <li>Lift add ons hob hood racks trays barbecue and microwave.</li>
+              <li>Reduce no shows and late cancels with deposits and clear prep reminders.</li>
+              <li>Cut quote time with photo and model based pricing.</li>
+              <li>Raise repeat bookings at six or twelve month intervals.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>AI Use Cases Already Working</h2>
+            <ul>
+              <li>Booking assistant on web and WhatsApp that gathers appliance type size brand photos access parking pets and preferred time.</li>
+              <li>Instant quote helper that maps photos and model to your price table and suggests add ons.</li>
+              <li>Smart reminders with prep remove trays clear area keep oven cold ensure parking and confirm payment method.</li>
+              <li>After care explainer with airing guidance first heat up and safe use tips.</li>
+              <li>Route and slot optimiser that clusters nearby jobs and balances short and long cleans.</li>
+              <li>Review and referral booster with before and after photos and links.</li>
+              <li>Answer bank for common questions and when a repair specialist is required.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Readiness + Metrics -->
+      <section style="margin-top:24px;">
+        <div class="grid-2">
+          <div class="card">
+            <h2>Data Readiness What you need</h2>
+            <ul>
+              <li>Job history appliance type duration status materials used and callbacks.</li>
+              <li>Quote logs with source photos price and win or loss reason.</li>
+              <li>Customer list with postcode consent and preferred channel.</li>
+              <li>Calendar travel time technician notes and equipment needed.</li>
+              <li>Price table for appliance types and add ons plus an hourly band for unknowns.</li>
+            </ul>
+            <p class="note">Start with CSV exports. Keep customer data private and only use what you need for each step.</p>
+          </div>
+
+          <div class="card">
+            <h2>Metrics to Track ROI</h2>
+            <ul>
+              <li><strong>Lead to job rate</strong> and time to first reply.</li>
+              <li><strong>Average order value</strong> and add on attach rate.</li>
+              <li><strong>No show and cancel rate</strong> with deposit coverage.</li>
+              <li><strong>Jobs per day</strong> and travel per job.</li>
+              <li><strong>Repeat rate</strong> at six or twelve months.</li>
+              <li><strong>Review score</strong> and referrals created.</li>
+              <li><strong>Rework rate</strong> within seven days and common causes.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 30 Day Focus -->
+      <section style="margin-top:24px;">
+        <h2>Example 30 Day Focus</h2>
+        <div class="grid-2">
+          <div class="card">
+            <ul>
+              <li><strong>Week 1:</strong> add a booking and quote assistant on site and WhatsApp. Turn on confirmations deposits and reminder messages with easy reschedule.</li>
+              <li><strong>Week 2:</strong> load last 12 months of jobs and quotes. Enable photo quotes with a checklist per appliance type.</li>
+              <li><strong>Week 3:</strong> publish simple bundles oven plus hob oven plus hood and full sparkle with what is included and excluded.</li>
+              <li><strong>Week 4:</strong> review lead to job rate average order value no shows jobs per day repeat rate and reviews versus last month. Keep the best two wins.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>What good looks like</h3>
+            <ul>
+              <li>Lead to job rate up by 15 to 25 percent.</li>
+              <li>Average order value up by 10 to 20 percent from add ons and bundles.</li>
+              <li>No shows down by 25 to 40 percent with deposits and reminders.</li>
+              <li>Jobs per day up through better routing and slot planning.</li>
+              <li>Rework rate down as photos and clear scope set expectations.</li>
+            </ul>
+            <p class="note">Keep it simple. One change per week. Measure then scale what works.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How To / Setup Help -->
+      <section style="margin-top:24px;">
+        <div class="grid-3">
+          <div class="card">
+            <h3>Set up in under an hour</h3>
+            <ul>
+              <li>Export jobs quotes and customers to CSV with appliance type duration materials and address.</li>
+              <li>Switch on confirmations deposits and reminders for bookings.</li>
+              <li>Add the assistant to your site and WhatsApp with a clear call to action and a QR on van and flyers.</li>
+            </ul>
+            <p class="note">If you use Calendly Stripe Google Calendar or a job app you can start with built in reports and message tools.</p>
+          </div>
+          <div class="card">
+            <h3>Fast wins to test</h3>
+            <ul>
+              <li>Tenancy end sparkle pack oven hob hood and racks at a bundle price.</li>
+              <li>Neighbor deal offer for two homes on the same street.</li>
+              <li>Barbecue season clean and season reminder with an add on for trays.</li>
+              <li>Rain day gap fill texts to nearby postcodes.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Guardrails</h3>
+            <ul>
+              <li>Do not give electrical or gas repair advice by message. If a fault is suspected recommend a licensed engineer.</li>
+              <li>Follow chemical safety and ventilation rules. If risk is high or parts are missing reschedule.</li>
+              <li>Keep addresses and photos private and restrict access.</li>
+              <li>Get consent for messages and make opt out easy.</li>
+              <li>Document scope chemicals and disclaimers on the job record with photos.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Integration Pathways + Dev Options -->
+      <section style="margin-top:24px;">
+        <div class="grid-3">
+          <div class="card">
+            <h2>Integration Pathways</h2>
+            <ul>
+              <li><strong>Scheduling:</strong> Calendly Google Calendar or Outlook.</li>
+              <li><strong>Routing:</strong> Google Maps route tools and area clustering.</li>
+              <li><strong>Messaging:</strong> WhatsApp Business SMS and email.</li>
+              <li><strong>Payments:</strong> Stripe deposit links and pay on completion.</li>
+              <li><strong>Reviews:</strong> Google reviews links and photo proof flow.</li>
+            </ul>
+            <p class="note">Adopt step by step. You do not need to replace current tools to start.</p>
+          </div>
+
+          <div class="card">
+            <h2>AI Build Options</h2>
+            <ul>
+              <li><strong>Low code:</strong> n8n or Zapier for lead capture reminders review asks and repeat prompts.</li>
+              <li><strong>Chat layer:</strong> a guarded assistant that quotes from your price table bundles and rules.</li>
+              <li><strong>Vision:</strong> photo intake to classify appliance type estimate time bands and flag risks like self clean mode.</li>
+              <li><strong>Dashboards:</strong> Google Sheets Looker Studio or Power BI for weekly review.</li>
+            </ul>
+            <p class="note">Keep messages short clear and tied to one action.</p>
+          </div>
+
+          <div class="card">
+            <h2>Staff Workflow Impact</h2>
+            <ul>
+              <li>Fewer back and forth quotes as photos and rules set scope.</li>
+              <li>Better day plans from clustered routes and balanced time bands.</li>
+              <li>Less phone time and more paid work on site.</li>
+              <li>Clear after care reduces repeat visits for odors or residue that are not faults.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cost vs Return + Customer Experience -->
+      <section style="margin-top:24px;">
+        <div class="grid-2">
+          <div class="card">
+            <h2>Cost vs Return</h2>
+            <ul>
+              <li><strong>Lead to job up 20 percent</strong> grows revenue without extra ads.</li>
+              <li><strong>No shows down 30 percent</strong> protects the daily value.</li>
+              <li><strong>Average order value up</strong> from add ons and bundles.</li>
+            </ul>
+            <p class="note">Most tools cost far less than the gains above.</p>
+          </div>
+
+          <div class="card">
+            <h2>Customer Experience Gains</h2>
+            <ul>
+              <li>Fast quotes with clear options and honest limits.</li>
+              <li>Simple reschedule and deposit links that do not need a call.</li>
+              <li>On time arrivals thanks to smart routing and equipment checks.</li>
+              <li>Photo proof of work with tips and airing guidance.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Business Readiness + Future Plays + Case Example -->
+      <section style="margin-top:24px;">
+        <div class="grid-3">
+          <div class="card">
+            <h2>Business Readiness Checklist</h2>
+            <ul>
+              <li>12 months of job and quote data exportable to CSV.</li>
+              <li>Price table for appliance types and add ons plus hourly band for unknowns.</li>
+              <li>Template messages for prep after care and reviews.</li>
+              <li>WhatsApp Business or SMS sender set up.</li>
+              <li>Named owner for weekly review of results.</li>
+            </ul>
+            <p class="note">If you tick most of these you can start this week.</p>
+          </div>
+
+          <div class="card">
+            <h2>Future Plays 12 to 24 months</h2>
+            <ul>
+              <li>Voice notes to job record and automatic photo tagging.</li>
+              <li>Seasonal demand forecasting to plan routes offers and staffing.</li>
+              <li>Vision models that score finish quality from photos for quality control.</li>
+              <li>Dynamic pricing that balances travel time and slot fill rate.</li>
+              <li>Subscription reminders every six or twelve months with preferred slots.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Case Example</h2>
+            <ul>
+              <li>Two person team covering a town and nearby villages.</li>
+              <li>Turned on photo quotes deposits and smart reminders.</li>
+              <li><strong>Lead to job up 22 percent</strong> in six weeks.</li>
+              <li><strong>No shows down 33 percent</strong> and jobs per day up by 14 percent.</li>
+              <li><strong>Average order value up 17 percent</strong> with hob and hood add ons.</li>
+            </ul>
+            <p class="note">Results will vary. The weekly review locks in wins and drops weak ideas.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section" id="contact">
+        <h2>Need support running your first 30 day development cycles?</h2>
+        <p>Book a 20 minute call. We can pick one or two actions from this playbook and I can help you get them live.</p>
+        <a href="https://calendly.com/john-jemima/30min" class="cta-button">Book a Call</a>
+        <p style="margin-top:12px; font-style:italic;">No long contracts. Clear setup fast feedback real results.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 30 Day AI Flywheel. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu
+    function toggleNav(btn){
+      const nav = document.getElementById('siteNav');
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    // Close menu on link click mobile
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('siteNav');
+        if (window.innerWidth <= 768 && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          const btn = document.querySelector('.topnav .icon');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
