@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newsagents  AI Playbook | 30 Day AI Flywheel</title>
+  <meta name="title" content="Newsagents  AI Playbook | 30 Day AI Flywheel">
+  <meta name="description" content="A practical AI playbook for newsagents. Growth drivers, proven AI use cases, data needs, ROI metrics, and a 30 day starter plan to lift basket size, grow morning trade, reduce stockouts, and cut waste.">
+
+  <link rel="canonical" href="https://30dayaiflywheel.com/resources/ai-industry-playbook-newsagents.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://30dayaiflywheel.com/resources/ai-industry-playbook-newsagents.html">
+  <meta property="og:title" content="Newsagents  AI Playbook | 30 Day AI Flywheel">
+  <meta property="og:description" content="An AI playbook to grow basket size, lift footfall at peak times, reduce stockouts, and streamline service for newsagents.">
+  <meta property="og:image" content="https://30dayaiflywheel.com/flywheel.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://30dayaiflywheel.com/resources/ai-industry-playbook-newsagents.html">
+  <meta name="twitter:title" content="Newsagents  AI Playbook | 30 Day AI Flywheel">
+  <meta name="twitter:description" content="An AI playbook to grow basket size, lift footfall at peak times, reduce stockouts, and streamline service for newsagents.">
+  <meta name="twitter:image" content="https://30dayaiflywheel.com/flywheel.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Base */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background:#fff; color:#333; line-height:1.6; overflow-x:hidden; padding-top:20px; }
+    .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+    /* Top navigation */
+    .topnav {
+      background:#fff; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      border-radius:8px; display:flex; justify-content:space-between; align-items:center;
+      padding:0 20px; height:70px; margin-bottom:30px;
+    }
+    .logo-container { display:flex; align-items:center; }
+    .logo { width:50px; height:50px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-right:-10px; }
+    .logo img { width:50px; height:50px; display:block; border-radius:8px; }
+    .logo-text { font-size:1.2rem; font-weight:600; color:#2c3e50; }
+    .logo-text a { color:#2c3e50; text-decoration:none; }
+
+    .nav-links { display:flex; align-items:center; }
+    .topnav a {
+      color:#333; text-align:center; padding:12px 16px; text-decoration:none;
+      font-size:1rem; font-weight:500; border-radius:4px; margin:0 5px; transition:all .3s ease;
+    }
+    .topnav a:hover, .topnav a.active { background:#ff9900; color:#fff; }
+
+    .topnav .icon {
+      display:none; color:#2c3e50; font-size:1.5rem; cursor:pointer; padding:10px; background:transparent; border:0;
+    }
+
+    /* Headings */
+    header { text-align:center; padding:30px 0 20px; border-bottom:1px solid #f0f0f0; position:relative; }
+    h1 { font-size:2.5rem; margin-bottom:10px; color:#2c3e50; }
+    h2 { font-size:1.8rem; margin:25px 0 15px; color:#2c3e50; }
+    h3 { font-size:1.4rem; margin:18px 0 10px; color:#2c3e50; }
+    .subtitle { font-size:1.2rem; color:#7f8c8d; margin-bottom:0; }
+
+    /* Layout helpers */
+    .intro { padding:30px 0; text-align:center; max-width:900px; margin:0 auto; }
+    .intro p { margin-bottom:12px; font-size:1.05rem; }
+    .grid-2 { display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; }
+    .grid-3 { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+    .card { border:1px solid #eaeaea; border-radius:8px; background:#fff; padding:18px; }
+    .card ul { margin-left:18px; }
+    .card li { margin:8px 0; }
+    .note { font-size:.95rem; color:#555; margin-top:6px; }
+
+    /* CTA */
+    .cta-section { text-align:center; padding:50px 20px; background:#f8f9fa; border-radius:8px; margin:40px 0; }
+    .cta-button {
+      display:inline-block; background:#ff9900; color:#fff; padding:14px 35px; font-size:1.1rem; font-weight:bold;
+      text-decoration:none; border-radius:4px; margin-top:16px; transition:all .3s; box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    }
+    .cta-button:hover { background:#e68a00; transform:translateY(-2px); }
+
+    /* Footer */
+    footer { text-align:center; padding:25px 0; color:#7f8c8d; font-size:.9rem; border-top:1px solid #f0f0f0; margin-top:30px; }
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .container { padding:0 15px; }
+      h1 { font-size:2.2rem; }
+      h2 { font-size:1.6rem; }
+      .grid-3 { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:768px){
+      .topnav { padding:0 15px; position:relative; }
+      .topnav .icon { display:block; }
+      .nav-links { display:none; width:100%; }
+      .topnav.open { flex-direction:column; height:auto; padding:15px; align-items:flex-start; }
+      .topnav.open .logo-container { width:100%; margin-bottom:15px; }
+      .topnav.open .nav-links { display:flex; flex-direction:column; width:100%; }
+      .topnav.open .nav-links a { display:block; width:100%; text-align:left; margin:5px 0; padding:10px; }
+      h1 { font-size:2rem; padding:0 20px; }
+      .subtitle { font-size:1.05rem; padding:0 20px; }
+      .grid-2, .grid-3 { grid-template-columns:1fr; }
+    }
+    @media (max-width:480px){
+      header { padding:25px 0 15px; }
+      h1 { font-size:1.8rem; }
+      h2 { font-size:1.5rem; margin:20px 0 12px; }
+      h3 { font-size:1.3rem; }
+      .logo-text { font-size:1rem; }
+      .topnav { height:60px; }
+      .cta-button { width:100%; padding:14px 20px; }
+    }
+
+    /* Small helpers */
+    .tag { display:inline-block; font-size:.85rem; padding:6px 10px; background:#f1f5f9; border-radius:16px; margin:4px 6px 0 0; color:#334155; }
+    .muted { color:#666; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top navigation -->
+    <div class="topnav" id="siteNav">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="/" aria-label="Home"> 
+            <img src="https://30dayaiflywheel.com/flywheel.png" width="50" height="50" alt="30 Day AI Flywheel logo"> 
+          </a>
+        </div>
+        <div class="logo-text"><a href="/">30 Day AI Flywheel</a></div> 
+      </div>
+
+      <button class="icon" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleNav(this)">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="/">Book</a>
+        <a href="https://30dayaiflywheel.com/resources/">Resources</a>
+        <a href="https://30dayaiflywheel.com/feedback.html">Feedback</a>
+      </div>
+    </div>
+
+    <!-- Page header -->
+    <header>
+      <h1>Newsagents  AI Playbook</h1>
+      <p class="subtitle">Grow basket size lift morning trade reduce stockouts and cut waste</p>
+    </header>
+
+    <main>
+      <!-- Intro -->
+      <section class="intro">
+        <h2>What this page gives you</h2>
+        <p>This playbook shows where AI helps a newsagent today. It focuses on bigger baskets, steadier trade in mornings and school run, fewer stockouts on top sellers, and quicker answers that cut counter time.</p>
+        <p class="muted">Use the 30 Day AI Flywheel: <span class="tag">Identify</span> <span class="tag">Cycle</span> <span class="tag">Measure</span> <span class="tag">Scale</span>.</p>
+      </section>
+
+      <!-- Growth Drivers + Use Cases -->
+      <section>
+        <div class="grid-2">
+          <div class="card">
+            <h2>Typical Growth Drivers</h2>
+            <ul>
+              <li>Increase average basket with simple add ons at the till.</li>
+              <li>Lift footfall in quiet slots with time bound offers.</li>
+              <li>Reduce waste on short date snacks and sandwiches.</li>
+              <li>Cut stockouts on newspapers vapes soft drinks confectionery and parcels supplies.</li>
+              <li>Speed the queue at peak with better rotas.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>AI Use Cases Already Working</h2>
+            <ul>
+              <li>Demand forecasts by SKU and day to guide orders and space.</li>
+              <li>Short date pricing prompts to clear fresh and food to go.</li>
+              <li>Till prompts for add ons coffee bottle of water scratch cards batteries lighters.</li>
+              <li>Quiet time offers sent by WhatsApp or SMS to nearby regulars.</li>
+              <li>Paper round planning that flags skips and holiday pauses.</li>
+              <li>FAQ assistant for opening hours parcels bill pay top ups Oyster and lottery info.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Readiness + Metrics -->
+      <section style="margin-top:24px;">
+        <div class="grid-2">
+          <div class="card">
+            <h2>Data Readiness  What you need</h2>
+            <ul>
+              <li>POS sales by date time SKU price quantity and discount.</li>
+              <li>On hand stock by SKU and last delivery.</li>
+              <li>Supplier lead times case sizes and cut off times.</li>
+              <li>Footfall or transaction counts by hour.</li>
+              <li>Delivery route list for home news with addresses masked.</li>
+              <li>WhatsApp or SMS list with consent flags.</li>
+            </ul>
+            <p class="note">Start with POS exports. Keep customer data private and only use what you need for each step.</p>
+          </div>
+
+          <div class="card">
+            <h2>Metrics to Track ROI</h2>
+            <ul>
+              <li><strong>Average basket</strong> value and items per basket.</li>
+              <li><strong>Waste rate</strong> on fresh and food to go.</li>
+              <li><strong>Stockout rate</strong> on top 100 SKUs.</li>
+              <li><strong>Sell through</strong> on promos and add ons.</li>
+              <li><strong>Revenue per labour hour</strong> and queue time at peak.</li>
+              <li><strong>Paper round accuracy</strong> deliveries minus skips and refunds.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 30 Day Focus -->
+      <section style="margin-top:24px;">
+        <h2>Example 30 Day Focus</h2>
+        <div class="grid-2">
+          <div class="card">
+            <ul>
+              <li><strong>Week 1:</strong> add an FAQ assistant to your site. Turn on a morning coffee and pastry or water add on prompt at the till. Set up a WhatsApp list with a join QR at the counter.</li>
+              <li><strong>Week 2:</strong> load 26 weeks of POS and stock. Enable forecasts for top 200 SKUs. Create a simple reorder list and low stock alerts for papers soft drinks vapes confectionery.</li>
+              <li><strong>Week 3:</strong> switch on short date discounts two hours before close for sandwiches bakery and food to go. Add bundle prompts for papers plus chocolate or drink.</li>
+              <li><strong>Week 4:</strong> review basket size waste stockouts and morning footfall versus last month. Keep the two best wins.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>What good looks like</h3>
+            <ul>
+              <li>Average basket up by 5 to 10 percent.</li>
+              <li>Waste on food to go down by 20 to 40 percent.</li>
+              <li>Stockouts on top sellers down by 25 to 35 percent.</li>
+              <li>Faster queues at school run and commute times.</li>
+              <li>Fewer missed papers and refund calls.</li>
+            </ul>
+            <p class="note">Keep it simple. One change per week. Measure then scale what works.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How To  Setup Help -->
+      <section style="margin-top:24px;">
+        <div class="grid-3">
+          <div class="card">
+            <h3>Set up in under an hour</h3>
+            <ul>
+              <li>Export POS sales and stock to CSV.</li>
+              <li>Switch on WhatsApp Business or an SMS sender and add a join QR at the counter.</li>
+              <li>Add the assistant to your site with clear CTAs and a QR near the till.</li>
+            </ul>
+            <p class="note">If you use EPOS Now Square Vend Lightspeed or Clover start with built in reports and simple webhooks.</p>
+          </div>
+          <div class="card">
+            <h3>Fast wins to test</h3>
+            <ul>
+              <li>Commuter bundle paper plus drink from 7am to 10am.</li>
+              <li>School run snack bundle after 3pm.</li>
+              <li>Short date price drops on sandwiches and bakery two hours before close.</li>
+              <li>Queue buster signs for parcels lottery and top ups to off peak slots.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Guardrails</h3>
+            <ul>
+              <li>Get opt in for messages and make opt out easy.</li>
+              <li>Don’t promote age restricted items to minors. Check age as required.</li>
+              <li>Keep customer data private and limit who can access it.</li>
+              <li>Follow pricing display product and lottery rules in your area.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Integration Pathways  Dev Options -->
+      <section style="margin-top:24px;">
+        <div class="grid-3">
+          <div class="card">
+            <h2>Integration Pathways</h2>
+            <ul>
+              <li><strong>POS:</strong> EPOS Now Square Vend Lightspeed and Clover export CSV and support APIs.</li>
+              <li><strong>Messaging:</strong> WhatsApp Business and SMS gateways for offers alerts and service updates.</li>
+              <li><strong>Payments:</strong> links for prepay bundles and paper round invoices.</li>
+              <li><strong>Dashboards:</strong> Google Sheets Looker Studio or Power BI for weekly review.</li>
+            </ul>
+            <p class="note">Go step by step. You won’t need to replace your POS to start.</p>
+          </div>
+
+          <div class="card">
+            <h2>AI Build Options</h2>
+            <ul>
+              <li><strong>Low code:</strong> n8n or Zapier for reorder alerts offer sends and short date drops.</li>
+              <li><strong>Forecasts:</strong> simple models from past sales weather events and school terms.</li>
+              <li><strong>Rules:</strong> an approved answer bank for services parcels top ups and returns.</li>
+              <li><strong>Till prompts:</strong> a light add on script for common upsells.</li>
+            </ul>
+            <p class="note">Keep messages short clear and linked to one action.</p>
+          </div>
+
+          <div class="card">
+            <h2>Staff Workflow Impact</h2>
+            <ul>
+              <li>Fewer manual checks as low stock alerts fire in time.</li>
+              <li>Less waste sorting because short date items sell earlier.</li>
+              <li>Till team gets simple prompts for the best add on at peak.</li>
+              <li>Managers spend more time on display and service not spreadsheets.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cost vs Return  Customer Experience -->
+      <section style="margin-top:24px;">
+        <div class="grid-2">
+          <div class="card">
+            <h2>Cost vs Return</h2>
+            <ul>
+              <li><strong>+15 add on items per day @ £1.50</strong> is about £675 per month.</li>
+              <li><strong>Waste down by £15 per day</strong> is about £450 per month.</li>
+              <li><strong>Two fewer stockouts daily on top lines</strong> protects repeat trade.</li>
+            </ul>
+            <p class="note">Most tools cost far less than the gains above.</p>
+          </div>
+
+          <div class="card">
+            <h2>Customer Experience Gains</h2>
+            <ul>
+              <li>Clear offers at the right time not spam.</li>
+              <li>Fewer empty shelves on favourites.</li>
+              <li>Faster service at peak with the right rota.</li>
+              <li>Simple answers online for services parcels and opening hours.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shop Readiness  Future Plays  Case Example -->
+      <section style="margin-top:24px;">
+        <div class="grid-3">
+          <div class="card">
+            <h2>Shop Readiness Checklist</h2>
+            <ul>
+              <li>POS exports for sales stock and discounts.</li>
+              <li>Supplier lead times case sizes and delivery days on file.</li>
+              <li>WhatsApp Business or an SMS sender set up.</li>
+              <li>Named owner for a weekly results review.</li>
+            </ul>
+            <p class="note">If you tick most of these you can start this week.</p>
+          </div>
+
+          <div class="card">
+            <h2>Future Plays  12 to 24 months</h2>
+            <ul>
+              <li>Computer vision shelf checks for gaps and facing.</li>
+              <li>Dynamic pricing on short date stock within safe rules.</li>
+              <li>Personalised offers for regulars based on baskets not profiles.</li>
+              <li>Handheld scans that keep stock live with fewer counts.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Case Example</h2>
+            <ul>
+              <li>Corner shop near a station.</li>
+              <li>Turned on commuter bundle and short date pricing.</li>
+              <li><strong>Basket up 8 percent</strong> in four weeks.</li>
+              <li><strong>Waste down 30 percent</strong> on sandwiches and bakery.</li>
+              <li>Top sellers stayed in stock with better reorder timing.</li>
+            </ul>
+            <p class="note">Results will vary. The weekly review locks in wins and drops weak ideas.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section" id="contact">
+        <h2>Need support running your first 30 day development cycles?</h2>
+        <p>Book a 20 minute call. We can pick one or two actions from this playbook and I can help you get them live.</p>
+        <a href="https://calendly.com/john-jemima/30min" class="cta-button">Book a Call</a>
+        <p style="margin-top:12px; font-style:italic;">No long contracts. Clear setup fast feedback real results.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 30 Day AI Flywheel. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu
+    function toggleNav(btn){
+      const nav = document.getElementById('siteNav');
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    // Close menu on link click mobile
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('siteNav');
+        if (window.innerWidth <= 768 && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          const btn = document.querySelector('.topnav .icon');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
