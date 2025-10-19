@@ -262,7 +262,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <section class="cta-section" id="contact">
         <h2>Ready to explore your first step with AI?</h2>
         <p>Book a 20 minute call to choose the right one day session for your business.</p>
-        <a href="https://calendly.com/john-jemima/30min" class="cta-button">Book a Call</a>
+        <!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ11s-AekKB4i0Vi-5A51eXG8elz-f-Ly99A1OUWTwZWy6LgmExlzo_d4QGv2d3IGuEuytShO48r?gv=true',
+      color: '#039BE5',
+      label: 'Book an appointment',
+      target,
+    });
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
         <p style="margin-top:20px; font-style:italic;">No obligation. Just a quick conversation to see where AI can deliver value fastest.</p>
       </section>
     </main>
@@ -297,3 +313,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 </html>
+
